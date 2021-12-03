@@ -368,7 +368,7 @@ section {
         color: var(--primary-colour);
         font-size: 1.8em;
     }
-    
+
     .nav-header {
         display: flex;
         place-content: space-between;
@@ -560,6 +560,7 @@ section {
         
             border-radius: 0.2em;
         
+            outline-width: 0.15em;
             outline-style: solid;
             outline-color: #161616;
             transition: background-color 0.2s linear 0.1s , color 0.2s linear 0s;
@@ -775,21 +776,25 @@ section {
     .hobbies-mobile-images{
         width:  80vw;
         height: auto;
-        overflow-x: hidden;
+        //overflow-x: hidden;
 
 
         .hobbies-mobile-photography{
             list-style: none;
             height: 100%;
             display: flex;
-            overflow-x: hidden;
+            scrollbar-color: #d1d1d1;
+            scrollbar-width: thin;
+            //overflow-x: hidden;
         }
 
         .hobbies-mobile-art{
             list-style: none;
             height: 100%;
             display: flex;
-            overflow-x: hidden;
+            scrollbar-color: #d1d1d1;
+            scrollbar-width: thin;
+            //overflow-x: hidden;
         }
 
         
@@ -978,6 +983,7 @@ section {
         
             border-radius: 0.2em;
         
+            outline-width: 0.15em;
             outline-style: solid;
             outline-color: #161616;
             transition: background-color 0.2s linear 0.1s , color 0.2s linear 0s;

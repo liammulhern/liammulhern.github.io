@@ -630,6 +630,7 @@ section {
   padding: .2em 1em;
   font-size: 1.4em;
   border-radius: 0.2em;
+  outline-width: 0.15em;
   outline-style: solid;
   outline-color: #161616;
   -webkit-transition: background-color 0.2s linear 0.1s , color 0.2s linear 0s;
@@ -943,7 +944,6 @@ section {
 .hobbies .hobbies-mobile-images {
   width: 80vw;
   height: auto;
-  overflow-x: hidden;
 }
 
 .hobbies .hobbies-mobile-images .hobbies-mobile-photography {
@@ -952,7 +952,8 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: hidden;
+  scrollbar-color: #d1d1d1;
+  scrollbar-width: thin;
 }
 
 .hobbies .hobbies-mobile-images .hobbies-mobile-art {
@@ -961,7 +962,8 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  overflow-x: hidden;
+  scrollbar-color: #d1d1d1;
+  scrollbar-width: thin;
 }
 
 .hobbies .hobbies-mobile-images li {
@@ -1169,6 +1171,7 @@ section {
   padding: .2em 1em;
   font-size: 1.6em;
   border-radius: 0.2em;
+  outline-width: 0.15em;
   outline-style: solid;
   outline-color: #161616;
   -webkit-transition: background-color 0.2s linear 0.1s , color 0.2s linear 0s;
