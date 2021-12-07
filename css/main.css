@@ -1342,7 +1342,7 @@ section {
             justify-content: center;
   }
   .hobbies .hobbies-right-col .images ul {
-    background: var(--primary-colour-light);
+    background: var(--text-colour-light);
     border-radius: 1em;
     padding: 0.8em;
     margin: 2em;
