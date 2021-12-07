@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@400;500&display=swap');
 
 :root {
     //--primary-colour: #141414;
@@ -278,8 +278,15 @@ section {
             height: 40vh;
 
             .heading-mobile-text{
+                font-family: 'Roboto Mono';
+                font-weight: 400;
                 overflow-wrap: break-word;
                 white-space: pre-wrap;
+                color: var(--text-colour-mid);
+
+                span, a{
+                    font-weight: 500;
+                }
 
                 &::after{
                     content: "|";
@@ -308,10 +315,17 @@ section {
             }
 
             .heading-desktop-text{
+                font-family: 'Roboto Mono';
+                font-weight: 400;
                 margin: 0;
                 overflow-wrap: break-word;
                 white-space: pre-wrap;
                 line-height: 150%;
+                color: var(--text-colour-mid);
+
+                span, a{
+                    font-weight: 500;
+                }
 
                 &::after{
                     content: "|";
@@ -367,7 +381,7 @@ section {
 
             &:hover{
                 background-color: var(--button-colour);
-                color: var(--text-colour-light);
+                color: var(--button-colour-text);
                 transform: scale(0.98);
                 border-radius: 0.5em;
             }
@@ -401,6 +415,13 @@ section {
         }
     }
 
+    .about-col-minor{
+        display: table;
+        width: 100%;
+        height: 100%;
+        padding: 0.5em;
+    }
+
     .about-profile {
         display: flex;
         justify-content: center;
@@ -426,22 +447,22 @@ section {
 
     .about-wave {
         display: inline-block;
-        vertical-align: baseline;
-        //width:  1em;
-        font-size: 1em;
-        transform-origin: 40% 90%; 
+        vertical-align: sub;
+        width:  1em;
+        //font-size: 1em;
+        transform-origin: 30% 70%; 
         //transform: rotate(45deg);
         animation: wave 2.5s infinite;
 
     @keyframes wave{
-        0% { transform: rotate(45.0deg) }
-        10% { transform: rotate(59.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
-        20% { transform: rotate(37.0deg) }
-        30% { transform: rotate(59.0deg) }
-        40% { transform: rotate(41.0deg) }
-        50% { transform: rotate(55.0deg) }
-        60% { transform: rotate(45.0deg) }  /* Reset for the last half to pause */
-       100% { transform: rotate(45.0deg) }
+        0% { transform: rotate(0.0deg) }
+        10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+        20% { transform: rotate(-8.0deg) }
+        30% { transform: rotate(14.0deg) }
+        40% { transform: rotate(-4.0deg) }
+        50% { transform: rotate(10.0deg) }
+        60% { transform: rotate(0.0deg) }  /* Reset for the last half to pause */
+       100% { transform: rotate(0.0deg) }
       }
         
     }
@@ -781,9 +802,6 @@ section {
 
     .contact-text{
         margin-bottom: 10vh;
-        .contact-text-sub{
-            text-align: center;
-        }
 
         .contact-text-heading{
             text-align: center;
@@ -881,7 +899,7 @@ section {
 
             &:hover{
                 background-color: var(--button-colour);
-                color: var(--text-colour-light);
+                color: var(--button-colour-text);
                 transform: scale(0.98);
                 border-radius: 0.5em;
             }
@@ -965,6 +983,10 @@ section {
         flex-wrap: wrap;
         justify-content: center;
     }
+
+    .about-minor, .about-main, .hobbies-text, .contact-text-sub{
+        text-align: justify;
+    }
 }
 
 @media screen and (min-width: 700px) {
@@ -1040,7 +1062,7 @@ section {
         justify-content: center;
         place-items: end center;
 
-        .about-col{
+        .about-col, .about-col-minor{
             margin: 1em;
         }
     }
@@ -1077,6 +1099,14 @@ section {
         display:  none;
     }
 
+    .contact-text-sub{
+        text-align: center;
+    }
+
+    .about-minor, .about-main, .hobbies-text {
+        text-align: justify;
+    }
+
 }
 
 @media screen and (min-width: 1080px) {
@@ -1090,7 +1120,7 @@ section {
 
     .about-minor-style{
         display: table-cell;
-        vertical-align: middle;
+        vertical-align: top;
         align-items: center;
     }
 
@@ -1236,7 +1266,13 @@ section {
         .about-col{
             margin: 1em;
         }
+
+        .about-col-minor{
+            margin-top: 50px;
+        }
     }
+
+
 }
 
 @media screen and (max-height: 300px){
@@ -1300,10 +1336,20 @@ section {
     
         //--button-colour: var(--text-colour-mid);
         --button-colour: var(--text-colour-dark);
+        --button-colour-text: var(--text-colour-light);
     }
     
     .text-bg{
         color: var(--text-colour-dark);
+    }
+
+    .about-wave{
+        fill: var(--text-colour-dark);
+    }
+
+    
+    .work-down{
+        stroke:var(--text-colour-dark);
     }
 }
 
@@ -1324,12 +1370,27 @@ section {
         --text-colour-span: var(--text-colour-light);
         //--text-colour-span: var(--text-colour-dark);
     
-        --button-colour: var(--text-colour-mid);
+        --button-colour: var(--text-colour-light);
+        --button-colour-text: var(--text-colour-dark);
         //--button-colour: var(--text-colour-dark);
     }
     
     .text-bg{
         color: var(--text-colour-light);
+    }
+
+    .heading-desktop-text{
+        a{
+            color: var(--text-colour-light);
+        }
+    }
+
+    .about-wave{
+        fill: var(--text-colour-light);
+    }
+
+    .work-down{
+        stroke:var(--text-colour-light);
     }
 }
 

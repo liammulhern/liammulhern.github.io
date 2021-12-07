@@ -100,8 +100,8 @@ window.onload = function(){
         "std::cout ``​ “​˹Engineer,​ Computer Scientist, and...˺”;",
         "console​.​log(​“˹Certified Geek :p˺”);",
         "System​.​out​.​println​(“˹So Go On!.. Have A Look˺”);",
-        "Serial.​println​(“˹Lo̡̤͓̫̊͆̽̂̿̎ͦadi̗̊̚ng​.͓̽̿̿̔͛̾́͞.̑̋̈̂ͯ͂ͥͬ͜҉̥̥͔̜ͅ..​˺”)̼:͓̤̦͓́̐̅ͫ̌ ↵↵E͉̊r͑͒ř̼̭͔͕ͅo͐̿̌r̮̥̘ ͎̘4̗̟͕̗̋0̳ͣ͛ͭ4​",
-        "//⬑You're still here? It's Over. Go Home. Go⬏...",
+        "Serial.​println​(“˹Loading​...˺”);",
+        "printf(“⬑​You're still here? It's Over. Go Home. Go⬏”);  ",
         "std::exit(˹​Null˺);",
         "Program.​restart();"
     ];
@@ -111,8 +111,8 @@ window.onload = function(){
         "std::cout ``​ “˹Aspiring Engineer, Computer Scientist, and...˺”;",
         "console​.​log​(“˹Certified Geek :p˺”);",
         "System​.​out​.​println​(“˹So Go On!.. Have A Look Around!˺”);",
-        "Serial.​println​(“˹Lo̡̤͓̫̊͆̽̂̿̎ͦadi̗̊̚ng​.͓̽̿̿̔͛̾́͞.̑̋̈̂ͯ͂ͥͬ͜҉̥̥͔̜ͅ..​˺”)̼:͓̤̦͓́̐̅ͫ̌ ↵↵ E͉̊r͑͒ř̼̭͔͕ͅo͐̿̌r̮̥̘ ͎̘4̗̟͕̗̋0̳ͣ͛ͭ4​",
-        "$(“body”).append​(“⬑​You're still here? It's Over. Go Home. Go⬏...”);              ",
+        "Serial.​println​(“˹Loading​...˺”);",
+        "$(“body”).append​(“⬑​You're still here? It's Over. Go Home. Go⬏...”);      ",
         "std::exit​(˹​Null˺);",
         "Program.​restart();"
     ];
