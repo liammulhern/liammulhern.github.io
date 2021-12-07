@@ -2,29 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@400;500&display=swap');
 
 :root {
-    //--primary-colour: #141414;
-    --primary-colour: white;
-
-    //--primary-colour-about: #202022; //#949CDF
-    //--primary-colour-hobbies: #202022; //#f4a9a8
-
-    --primary-colour-about: #949CDF; //#949CDF
-    --primary-colour-hobbies: #f4a9a8; //#f4a9a8
-
-    //--primary-colour-dark: #202022; //#161616
-    --primary-colour-dark: #161616; //#161616
-
-    --primary-colour-light: white;
-
     --text-colour-dark: #161616;
-    --text-colour-mid: #d1d1d1;
+    --text-colour-mid: #b4b4b4;
     --text-colour-light: white;
-
-    //--text-colour-span: var(--text-colour-light);
-    --text-colour-span: var(--text-colour-dark);
-
-    //--button-colour: var(--text-colour-mid);
-    --button-colour: var(--text-colour-dark);
+    
 }
 
 html {
@@ -148,12 +129,6 @@ section {
     &.menu-open{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
-    
-    .nav-name-logo {
-        text-decoration: none;
-        color: var(--primary-colour-light);
-        font-size: 1.8em;
-    }
 
     .nav-header {
         display: flex;
@@ -213,6 +188,12 @@ section {
         padding-left: 0.5em;
         text-align: left;
         margin-bottom: 0;
+
+        .nav-name-logo {
+            text-decoration: none;
+            color: var(--text-colour-light);
+            font-size: 1.8em;
+        }
 
         .nav-mobile-style{
             color: var(--text-colour-light);
@@ -425,7 +406,7 @@ section {
             border-radius: 50%;
             outline-style: solid;
             outline-width: 0.2em;
-            outline-color: var(--primary-colour-light);
+            outline-color: var(--text-colour-light);
         }
     }
 
@@ -457,7 +438,7 @@ section {
     }
 
     .about-minor {
-        color: var(--primary-colour-light);
+        color: var(--text-colour-light);
         font-size: 1em;
     }
 
@@ -592,35 +573,35 @@ section {
     }
     
     .portfolio-colour-a::after{
-        background: #fbc6a4;
+        background: var(--portfolio-colour-a);
     }
     
     .portfolio-colour-b::after{
-        background: #f4a9a8;
+        background: var(--portfolio-colour-b);
     }
     
     .portfolio-colour-c::after{
-        background: #1e1e1e;
+        background: var(--portfolio-colour-c);
     }
     
     .portfolio-colour-d::after{
-        background: #949cdf;
+        background: var(--portfolio-colour-d);
     }
     
     .portfolio-colour-e::after{
-        background: #bddbd5;
+        background: var(--portfolio-colour-e);
     }
     
     .portfolio-colour-f::after{
-        background: #79b4b7;
+        background: var(--portfolio-colour-f);
     }
     
     .portfolio-colour-g::after{
-        background: #433887;
+        background: var(--portfolio-colour-g);
     }
     
     .portfolio-colour-h::after{
-        background: #94B3FD;
+        background: var(--portfolio-colour-h);
     }
 
     .portfolio-header{
@@ -1010,6 +991,7 @@ section {
         display: block;
 
         .nav-name-logo {
+            color: var(--text-colour-light);
             font-size: 1.4em;
             float: left;
             padding: 0.5em;
@@ -1326,6 +1308,15 @@ section {
         //--button-colour: var(--text-colour-mid);
         --button-colour: var(--text-colour-dark);
         --button-colour-text: var(--text-colour-light);
+        
+        --portfolio-colour-a: #fbc6a4;
+        --portfolio-colour-b: #f4a9a8;
+        --portfolio-colour-c: #1e1e1e;
+        --portfolio-colour-d: #949cdf;
+        --portfolio-colour-e: #bddbd5;
+        --portfolio-colour-f: #79b4b7;
+        --portfolio-colour-g: #433887;
+        --portfolio-colour-h: #94B3FD;
     }
 
     .heading-desktop-text, .heading-mobile-text{
@@ -1368,6 +1359,16 @@ section {
         --button-colour: var(--text-colour-light);
         --button-colour-text: var(--text-colour-dark);
         //--button-colour: var(--text-colour-dark);
+
+        
+        --portfolio-colour-a: #1e1e1e;
+        --portfolio-colour-b: #1a1a1a;
+        --portfolio-colour-c: #181818;
+        --portfolio-colour-d: #1c1c1c;
+        --portfolio-colour-e: #1a1a1a;
+        --portfolio-colour-f: #181818;
+        --portfolio-colour-g: #181818;
+        --portfolio-colour-h: #1a1a1a;
     }
     
     .text-bg{
@@ -1388,4 +1389,3 @@ section {
         stroke:var(--text-colour-light);
     }
 }
-

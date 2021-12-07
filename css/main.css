@@ -1,15 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@400;500&display=swap");
 :root {
-  --primary-colour: white;
-  --primary-colour-about: #949CDF;
-  --primary-colour-hobbies: #f4a9a8;
-  --primary-colour-dark: #161616;
-  --primary-colour-light: white;
   --text-colour-dark: #161616;
-  --text-colour-mid: #d1d1d1;
+  --text-colour-mid: #b4b4b4;
   --text-colour-light: white;
-  --text-colour-span: var(--text-colour-dark);
-  --button-colour: var(--text-colour-dark);
 }
 
 html {
@@ -140,12 +133,6 @@ section {
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
 
-.nav-bar .nav-name-logo {
-  text-decoration: none;
-  color: var(--primary-colour-light);
-  font-size: 1.8em;
-}
-
 .nav-bar .nav-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -212,6 +199,12 @@ section {
   padding-left: 0.5em;
   text-align: left;
   margin-bottom: 0;
+}
+
+.nav-bar .nav-mobile .nav-name-logo {
+  text-decoration: none;
+  color: var(--text-colour-light);
+  font-size: 1.8em;
 }
 
 .nav-bar .nav-mobile .nav-mobile-style {
@@ -454,7 +447,7 @@ section {
   border-radius: 50%;
   outline-style: solid;
   outline-width: 0.2em;
-  outline-color: var(--primary-colour-light);
+  outline-color: var(--text-colour-light);
 }
 
 .about .left-col {
@@ -549,7 +542,7 @@ section {
 }
 
 .about .about-minor {
-  color: var(--primary-colour-light);
+  color: var(--text-colour-light);
   font-size: 1em;
 }
 
@@ -718,35 +711,35 @@ section {
 }
 
 .work .portfolio-colour-a::after {
-  background: #fbc6a4;
+  background: var(--portfolio-colour-a);
 }
 
 .work .portfolio-colour-b::after {
-  background: #f4a9a8;
+  background: var(--portfolio-colour-b);
 }
 
 .work .portfolio-colour-c::after {
-  background: #1e1e1e;
+  background: var(--portfolio-colour-c);
 }
 
 .work .portfolio-colour-d::after {
-  background: #949cdf;
+  background: var(--portfolio-colour-d);
 }
 
 .work .portfolio-colour-e::after {
-  background: #bddbd5;
+  background: var(--portfolio-colour-e);
 }
 
 .work .portfolio-colour-f::after {
-  background: #79b4b7;
+  background: var(--portfolio-colour-f);
 }
 
 .work .portfolio-colour-g::after {
-  background: #433887;
+  background: var(--portfolio-colour-g);
 }
 
 .work .portfolio-colour-h::after {
-  background: #94B3FD;
+  background: var(--portfolio-colour-h);
 }
 
 .work .portfolio-header {
@@ -1180,6 +1173,7 @@ section {
     display: block;
   }
   .nav-desktop .nav-name-logo {
+    color: var(--text-colour-light);
     font-size: 1.4em;
     float: left;
     padding: 0.5em;
@@ -1447,6 +1441,14 @@ section {
     --text-colour-span: var(--text-colour-dark);
     --button-colour: var(--text-colour-dark);
     --button-colour-text: var(--text-colour-light);
+    --portfolio-colour-a: #fbc6a4;
+    --portfolio-colour-b: #f4a9a8;
+    --portfolio-colour-c: #1e1e1e;
+    --portfolio-colour-d: #949cdf;
+    --portfolio-colour-e: #bddbd5;
+    --portfolio-colour-f: #79b4b7;
+    --portfolio-colour-g: #433887;
+    --portfolio-colour-h: #94B3FD;
   }
   .heading-desktop-text a, .heading-mobile-text a {
     color: var(--text-colour-dark);
@@ -1471,6 +1473,14 @@ section {
     --text-colour-span: var(--text-colour-light);
     --button-colour: var(--text-colour-light);
     --button-colour-text: var(--text-colour-dark);
+    --portfolio-colour-a: #1e1e1e;
+    --portfolio-colour-b: #1a1a1a;
+    --portfolio-colour-c: #181818;
+    --portfolio-colour-d: #1c1c1c;
+    --portfolio-colour-e: #1a1a1a;
+    --portfolio-colour-f: #181818;
+    --portfolio-colour-g: #181818;
+    --portfolio-colour-h: #1a1a1a;
   }
   .text-bg {
     color: var(--text-colour-light);
