@@ -101,7 +101,7 @@ window.onload = function(){
         "console​.​log(​“˹Certified Geek :p˺”);",
         "System​.​out​.​println​(“˹So Go On!.. Have A Look˺”);",
         "Serial.​println​(“˹Loading​...˺”);",
-        "printf(“⬑​You're still here? It's Over. Go Home. Go⬏”);  ",
+        "printf(“⬑​You're still here? It's Over. Go Home. Go...⬏”);  ",
         "std::exit(˹​Null˺);",
         "Program.​restart();"
     ];
@@ -112,7 +112,7 @@ window.onload = function(){
         "console​.​log​(“˹Certified Geek :p˺”);",
         "System​.​out​.​println​(“˹So Go On!.. Have A Look Around!˺”);",
         "Serial.​println​(“˹Loading​...˺”);",
-        "$(“body”).append​(“⬑​You're still here? It's Over. Go Home. Go⬏...”);      ",
+        "$(“body”).append​(“⬑​You're still here? It's Over. Go Home. Go...⬏”);      ",
         "std::exit​(˹​Null˺);",
         "Program.​restart();"
     ];

@@ -27,23 +27,13 @@
     --button-colour: var(--text-colour-dark);
 }
 
-.text-bg{
-    &.dark{
-        color: var(--text-colour-dark);
-    }
-
-    &.light{
-        color: var(--text-colour-light);
-    }
-
-}
-
 html {
     scroll-behavior: smooth;
 }
 
 body {
-    background:  var(--primary-colour);
+    transition: background-color 0.5s ease;
+    background-color:  var(--primary-colour);
     margin: 0;
     font-family: 'Poppins';
     scroll-behavior: smooth;
@@ -99,7 +89,6 @@ h5{
 }
 
 a {
-    color: var(--text-colour-dark);
     text-decoration: none;
 }
 
@@ -153,7 +142,7 @@ section {
     top: 0;
     z-index: 10;
     clip-path: polygon(0 0, 100% 0, 100% 17%, 0 17%);
-    transition: all 0.8s ease-in-out;
+    transition: all 0.5s ease-in-out;
 
     
     &.menu-open{
@@ -1338,6 +1327,12 @@ section {
         --button-colour: var(--text-colour-dark);
         --button-colour-text: var(--text-colour-light);
     }
+
+    .heading-desktop-text, .heading-mobile-text{
+        a{
+            color: var(--text-colour-dark);
+        }
+    }
     
     .text-bg{
         color: var(--text-colour-dark);
@@ -1379,7 +1374,7 @@ section {
         color: var(--text-colour-light);
     }
 
-    .heading-desktop-text{
+    .heading-desktop-text, .heading-mobile-text{
         a{
             color: var(--text-colour-light);
         }
