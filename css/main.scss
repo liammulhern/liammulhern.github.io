@@ -1147,8 +1147,8 @@ section {
     
         .hobbies-left-col{
             width: 100%;
-            margin-left: 5em;
-            margin-right: 5em;
+            margin-left: 5vw;
+            margin-right: 5vw;
             display: inline-block;
         }
 
@@ -1156,8 +1156,8 @@ section {
         .hobbies-right-col{
             display: inline-block;
             width: 50vw;
-            margin-left: 5em;
-            margin-right: 5em;
+            margin-left: 5vw;
+            margin-right: 5vw;
     
             .images-left-col{
                 width: 100%;
@@ -1254,6 +1254,104 @@ section {
 
     .heading-desktop{
         display: none;
+    }
+}
+
+@media screen and (max-height: 900px) and (min-width: 1000px){
+    .hobbies{
+        .container{
+            margin: 3em;
+        }
+
+        h1{
+            margin-top: 1em;
+        }
+
+        .hobbies-mobile-images{
+            display: none;
+        }
+
+        .hobbies-art{
+            margin-top: 10%;
+        }
+    
+        .hobbies-content{
+            display: flex;
+            justify-content: left;
+        }
+
+        .hobbies-centre{
+            padding-top: 3em;
+        }
+    
+        .hobbies-left-col{
+            width: 100%;
+            margin-left: 5em;
+            //margin-right: 5em;
+            display: inline-block;
+        }
+
+    
+        .hobbies-right-col{
+            display: inline-block;
+            width: 50vw;
+            //margin-left: 5em;
+            //margin-right: 5em;
+    
+            .images-left-col{
+                width: 100%;
+                margin: 2em;
+    
+                ul{
+                    margin: 0;
+                    transform: translateY(-5%);
+                }
+            }
+            .images-right-col{
+                width: 100%;
+                margin: 2em;
+    
+                ul{
+                    margin: 0;
+                    transform: translateY(10%);
+                }
+            }
+    
+            .images{
+                display: flex;
+                justify-content: center;
+    
+                ul{
+                    background: var(--text-colour-light);
+                    border-radius: 1em;
+                    padding: 0.8em;
+                    margin: 2em;
+
+    
+                    li{
+                        padding: 0.4em;
+                    }
+                }
+    
+                img{
+                    border-radius: 0.5em;
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+                    transition: all .3s ease;
+
+                    &:hover{
+                        border-radius: 0.5em;
+                        transform: scale(0.95);
+                    }
+                    &:active{
+                        transform: scale(0.92);
+                    }
+
+                }
+            }
+    
+        }
     }
 }
 
