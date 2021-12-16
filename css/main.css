@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&family=Roboto+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto+Mono:wght@400;500&display=swap");
 :root {
   --text-colour-dark: #161616;
   --text-colour-mid: #b4b4b4;
@@ -37,20 +37,9 @@ h1::after {
   border-radius: 1em;
 }
 
-h2, h5 {
-  color: var(--text-colour-dark);
-}
-
-p {
-  color: var(--text-colour-dark);
-}
-
-.text-mid {
-  color: var(--text-colour-mid);
-}
-
 h2 {
   font-size: 2em;
+  color: var(--text-colour-dark);
 }
 
 h3 {
@@ -65,6 +54,11 @@ h5 {
   font-size: 1.8em;
   margin: 0;
   padding: 0;
+  color: var(--text-colour-dark);
+}
+
+p {
+  color: var(--text-colour-dark);
 }
 
 a {
@@ -88,14 +82,54 @@ section {
   padding: 2em;
 }
 
-.fade-in {
-  opacity: 0;
-  -webkit-transition: opacity 0.25s ease-in;
-  transition: opacity 0.25s ease-in;
+.text-mid {
+  color: var(--text-colour-mid);
 }
 
-.fade-in.appear {
+.intro-fade-in {
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.intro-fade-in.appear {
   opacity: 1;
+}
+
+.intro-slide-right {
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.intro-slide-right.appear {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.intro-slide-left {
+  -webkit-transform: translateX(40px);
+          transform: translateX(40px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.intro-slide-left.appear {
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+
+.intro-slide-up {
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.intro-slide-up.appear {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
 }
 
 .z-index-1 {
@@ -429,18 +463,18 @@ section {
 }
 
 .about .about-profile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: table-cell;
+  vertical-align: middle;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 1em;
+  margin: 1em;
 }
 
 .about .about-profile .about-profile-image {
   display: block;
-  width: 100%;
+  margin: 0 auto;
   height: auto;
   max-width: 300px;
   max-height: 300px;
@@ -476,7 +510,6 @@ section {
     -webkit-transform: rotate(14deg);
             transform: rotate(14deg);
   }
-  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     -webkit-transform: rotate(-8deg);
             transform: rotate(-8deg);
@@ -497,7 +530,6 @@ section {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  /* Reset for the last half to pause */
   100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -513,7 +545,6 @@ section {
     -webkit-transform: rotate(14deg);
             transform: rotate(14deg);
   }
-  /* The following five values can be played with to make the waving more or less extreme */
   20% {
     -webkit-transform: rotate(-8deg);
             transform: rotate(-8deg);
@@ -534,7 +565,6 @@ section {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  /* Reset for the last half to pause */
   100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -542,12 +572,7 @@ section {
 }
 
 .about .about-minor {
-  color: var(--text-colour-light);
-  font-size: 1em;
-}
-
-.about p {
-  font-size: 1.5em;
+  font-weight: 300;
 }
 
 .about::after {
@@ -584,6 +609,7 @@ section {
   padding-left: 3em;
   padding-right: 3em;
   text-align: justify;
+  text-align-last: center;
 }
 
 .work .work-text-portfolio {
@@ -593,6 +619,7 @@ section {
 
 .work .work-main-sub {
   color: var(--text-colour-mid);
+  font-weight: 300;
 }
 
 .work .work-space {
@@ -678,8 +705,8 @@ section {
           box-sizing: border-box;
   padding: 3em;
   padding-top: 5em;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 
@@ -764,6 +791,46 @@ section {
   font-size: 2em;
 }
 
+.portfolio {
+  background-color: var(--primary-colour);
+  margin: 0;
+  padding: 0;
+}
+
+.portfolio .portfolio-text-main {
+  overflow: hidden;
+  width: 100%;
+  margin: 2em 0;
+}
+
+.portfolio .portfolio-image {
+  display: block;
+  width: 100%;
+}
+
+.portfolio .portfolio-text-header {
+  margin: 3em;
+  font-weight: 300;
+  color: var(--text-colour-light);
+}
+
+.portfolio .portfolio-text-header span {
+  font-weight: 400;
+}
+
+.portfolio .portfolio-text-header p {
+  color: var(--text-colour-light);
+}
+
+.portfolio .portfolio-text-header::after {
+  display: block;
+  content: '';
+  width: 3em;
+  height: 3px;
+  background: currentColor;
+  border-radius: 1em;
+}
+
 .hobbies {
   position: relative;
   width: 100%;
@@ -792,69 +859,53 @@ section {
 }
 
 .hobbies .hobbies-mobile-images {
-  width: 80vw;
-  height: auto;
+  overflow: hidden;
 }
 
 .hobbies .hobbies-mobile-images .hobbies-mobile-photography {
-  list-style: none;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  scrollbar-color: var(--text-colour-mid);
-  scrollbar-width: thin;
+  overflow: visible;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .hobbies .hobbies-mobile-images .hobbies-mobile-art {
-  list-style: none;
-  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  scrollbar-color: var(--text-colour-mid);
-  scrollbar-width: thin;
+  overflow: visible;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .hobbies .hobbies-mobile-images li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: inline-block;
   margin-right: 1em;
-  width: 60vw;
-  height: auto;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
+  margin-left: 0px;
+  width: 50vw;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
 .hobbies .hobbies-mobile-images li img {
-  cursor: -webkit-grab;
-  cursor: grab;
-  display: inline-block;
   max-width: 100%;
   height: 90%;
+  display: inline-block;
   border: 3px solid var(--text-colour-light);
   border-radius: 1em;
   pointer-events: none;
 }
 
 .hobbies .hobbies-mobile-images li:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
   border-radius: 0.5em;
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
-}
-
-.hobbies .hobbies-mobile-images li:active {
-  -webkit-transform: scale(0.92);
-          transform: scale(0.92);
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
 }
 
 .hobbies .hobbies-down {
@@ -922,25 +973,17 @@ section {
 }
 
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: hidden;
   padding-top: 2em;
 }
 
-.contact h1 {
-  margin-bottom: 0;
+.contact .contact-text-sub {
+  text-align: justify;
+  text-align-last: center;
 }
 
 .contact .contact-info {
   padding: 2em;
+  display: block;
 }
 
 .contact .contact-text {
@@ -953,51 +996,39 @@ section {
 }
 
 .contact .contact-email {
-  list-style-type: none;
-  margin: 0 auto;
-  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contact .contact-email-container {
   overflow: hidden;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
+  display: inline-block;
 }
 
-.contact .contact-email::after {
-  display: block;
-  margin: 0;
-  content: '';
-  width: 96%;
-  height: 1px;
-  margin-bottom: 0.5em;
-  background: currentColor;
-}
-
-.contact .contact-email:hover::after {
-  display: block;
-  margin: 0;
-  content: '';
-  width: 96%;
-  height: 1px;
-  margin-bottom: 0.5em;
-  background: #f4a9a8;
-}
-
-.contact .contact-email .contact-email-button {
+.contact .contact-email-container .contact-email-button {
+  display: inline-block;
+  word-wrap: break-word;
   text-align: center;
+  text-decoration: underline;
   font-family: 'Roboto Mono';
-  font-size: 1.5em;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
 
-.contact .contact-email .contact-email-button:hover {
+.contact .contact-email-container .contact-email-button:hover {
   color: #f4a9a8;
 }
 
-.contact .contact-email .contact-email-button::after {
-  content: "|";
+.contact .contact-email-container .contact-email-button::after {
+  content: "";
+  border-right: currentColor 0.1em solid;
+  padding: 0.1em;
   -webkit-animation: blink 0.5s linear infinite alternate;
           animation: blink 0.5s linear infinite alternate;
 }
@@ -1059,48 +1090,40 @@ section {
           transform: scale(0.92);
 }
 
-.contact .contact-info-social .content {
+.contact .contact-info-social {
   margin: 0 auto;
-  padding: 0;
-  overflow: hidden;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+}
+
+.contact .contact-info-social .content {
+  overflow: visible;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .contact .contact-info-social .content li {
-  float: left;
+  padding: 0.8em;
 }
 
 .contact .contact-info-social .content li a {
   font-size: 3em;
-  padding: 0.5em;
   display: block;
 }
 
 .contact .contact-info-social .content li .contact-logo {
-  -webkit-transition: -webkit-transform 0.2s ease-in;
-  transition: -webkit-transform 0.2s ease-in;
-  transition: transform 0.2s ease-in;
-  transition: transform 0.2s ease-in, -webkit-transform 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
 }
 
 .contact .contact-info-social .content li .contact-logo:hover {
   -webkit-transform: scale(0.95);
           transform: scale(0.95);
+  color: #f4a9a8;
 }
 
 .contact .contact-info-social .content li .contact-logo:active {
@@ -1131,6 +1154,9 @@ section {
   .hobbies-down {
     display: block;
   }
+  .contact-email-button {
+    font-size: 1.2em;
+  }
   .about-text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1140,6 +1166,9 @@ section {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .about-minor {
+    font-size: 1em;
   }
   .about-minor, .about-main, .hobbies-text, .contact-text-sub {
     text-align: justify;
@@ -1207,8 +1236,8 @@ section {
     margin: 1em;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (minmax(400px, 1fr))[auto-fit];
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1240,11 +1269,11 @@ section {
     background-color: none;
     border-radius: 1em;
   }
+  .contact-email-button {
+    font-size: 1.5em;
+  }
   .hobbies-right-col {
     display: none;
-  }
-  .contact-text-sub {
-    text-align: center;
   }
   .about-minor, .about-main, .hobbies-text {
     text-align: justify;
@@ -1267,9 +1296,6 @@ section {
   }
   .work .container {
     margin: 3em;
-  }
-  .work .work-text {
-    text-align: center;
   }
   .work .work-main {
     font-size: 1.6em;
@@ -1322,6 +1348,7 @@ section {
     margin: 2em;
   }
   .hobbies .hobbies-right-col .images-left-col ul {
+    overflow: hidden;
     -webkit-transform: translateY(-5%);
             transform: translateY(-5%);
   }
@@ -1330,6 +1357,7 @@ section {
     margin: 2em;
   }
   .hobbies .hobbies-right-col .images-right-col ul {
+    overflow: hidden;
     -webkit-transform: translateY(10%);
             transform: translateY(10%);
   }
@@ -1366,6 +1394,12 @@ section {
   .hobbies .hobbies-right-col .images img:active {
     -webkit-transform: scale(0.92);
             transform: scale(0.92);
+  }
+  .contact .contact-text-sub {
+    text-align: center;
+  }
+  .contact .contact-email-button {
+    font-size: 1.7em;
   }
   .contact .contact-text-heading {
     padding: 2em;
@@ -1443,6 +1477,7 @@ section {
     margin: 2em;
   }
   .hobbies .hobbies-right-col .images-left-col ul {
+    overflow: hidden;
     margin: 0;
     -webkit-transform: translateY(-5%);
             transform: translateY(-5%);
@@ -1450,8 +1485,10 @@ section {
   .hobbies .hobbies-right-col .images-right-col {
     width: 100%;
     margin: 2em;
+    overflow: hidden;
   }
   .hobbies .hobbies-right-col .images-right-col ul {
+    overflow: hidden;
     margin: 0;
     -webkit-transform: translateY(10%);
             transform: translateY(10%);
@@ -1465,6 +1502,7 @@ section {
             justify-content: center;
   }
   .hobbies .hobbies-right-col .images ul {
+    overflow: hidden;
     background: var(--text-colour-light);
     border-radius: 1em;
     padding: 0.8em;
@@ -1537,6 +1575,9 @@ section {
     --portfolio-colour-g: #433887;
     --portfolio-colour-h: #94B3FD;
   }
+  .about-minor {
+    color: var(--text-colour-light);
+  }
   .heading-desktop-text a, .heading-mobile-text a {
     color: var(--text-colour-dark);
   }
@@ -1571,6 +1612,9 @@ section {
   }
   .text-bg {
     color: var(--text-colour-light);
+  }
+  .about-minor {
+    color: var(--text-colour-mid);
   }
   .heading-desktop-text a, .heading-mobile-text a {
     color: var(--text-colour-light);
