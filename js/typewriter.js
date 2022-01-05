@@ -9,6 +9,29 @@ var typer = function(html_element, text, period){
     this.typeSpeed = 150;
 };
 
+var textArray1 = [
+    "Console.​Write​Line​(“˹Hi (^∇^)!˺”);",
+    "print('˹​I’m Liam Mulhern˺')",
+    "std::cout ``​ “​˹Engineer,​ Computer Scientist, and...˺”;",
+    "console​.​log(​“˹Certified Geek :p˺”);",
+    "System​.​out​.​println​(“˹So Go On!.. Have A Look˺”);",
+    "Serial.​println​(“˹Loading​...˺”);",
+    "printf(“⬑​You're still here? It's Over. Go Home. Go...⬏”);  ",
+    "std::exit(˹​Null˺);",
+    "Program.​restart();"
+];
+
+var textArray2 = [
+    "Console.​Write​Line​(“˹Hi (^∇^)!˺”); ↵↵print('˹I’m Liam Mulhern˺')",
+    "std::cout ``​ “˹Aspiring Engineer, Computer Scientist, and...˺”;",
+    "console​.​log​(“˹Certified Geek :p˺”);",
+    "System​.​out​.​println​(“˹So Go On!.. Have A Look Around!˺”);",
+    "Serial.​println​(“˹Loading​...˺”);",
+    "$(“body”).append​(“⬑​You're still here? It's Over. Go Home. Go...⬏”);      ",
+    "std::exit​(˹​Null˺);",
+    "Program.​restart();"
+];
+
 var writingTag = false;
 
 typer.prototype.tick = function(){
@@ -94,29 +117,6 @@ typer.prototype.tick = function(){
 };
 
 window.onload = function(){
-    var textArray1 = [
-        "Console.​Write​Line​(“˹Hi (^∇^)!˺”);",
-        "print('˹​I’m Liam Mulhern˺')",
-        "std::cout ``​ “​˹Engineer,​ Computer Scientist, and...˺”;",
-        "console​.​log(​“˹Certified Geek :p˺”);",
-        "System​.​out​.​println​(“˹So Go On!.. Have A Look˺”);",
-        "Serial.​println​(“˹Loading​...˺”);",
-        "printf(“⬑​You're still here? It's Over. Go Home. Go...⬏”);  ",
-        "std::exit(˹​Null˺);",
-        "Program.​restart();"
-    ];
-
-    var textArray2 = [
-        "Console.​Write​Line​(“˹Hi (^∇^)!˺”); ↵↵print('˹I’m Liam Mulhern˺')",
-        "std::cout ``​ “˹Aspiring Engineer, Computer Scientist, and...˺”;",
-        "console​.​log​(“˹Certified Geek :p˺”);",
-        "System​.​out​.​println​(“˹So Go On!.. Have A Look Around!˺”);",
-        "Serial.​println​(“˹Loading​...˺”);",
-        "$(“body”).append​(“⬑​You're still here? It's Over. Go Home. Go...⬏”);      ",
-        "std::exit​(˹​Null˺);",
-        "Program.​restart();"
-    ];
-
     var element1 = document.getElementById('typewriter');
 
     new typer(element1, textArray1, 2000);

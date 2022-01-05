@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap');
 
 :root{
     --text-colour-dark: #161616;
@@ -26,6 +26,7 @@ h1{
     display: block;
     position: relative;
     color: var(--text-colour-dark);
+    padding-top: 10vh;
 
     &::after{
         display: block;
@@ -39,7 +40,10 @@ h1{
 }
 
 h2{
-    font-size: 2em;
+    font-size: 1.8em;
+    font-weight: 400;
+    margin:  0;
+    padding: 0;
     color: var(--text-colour-dark);
 }
 
@@ -48,13 +52,7 @@ h3{
 }
 
 h4{
-    font-size: 1.2em;
-}
-
-h5{
-    font-size: 1.8em;
-    margin:  0;
-    padding: 0;
+    font-size: 2em;
     color: var(--text-colour-dark);
 }
 
@@ -77,10 +75,6 @@ ul{
 li{
     margin:  0;
     padding: 0;
-}
-
-section{
-    padding: 2em;
 }
 
 .text-mid{
@@ -123,20 +117,40 @@ section{
 
 }
 
-.z-index-1{
-    z-index: 1;
+.intro-slide-down{
+    transform: translateY(-40px);
+    transition: all 0.5s ease;
+
+    &.appear{
+        transform: translateY(0px);
+    }
+
 }
 
-.z-index-2{
-    z-index: 2;
-}
+.button{
+    text-align: center;
+    color: var(--button-colour);
 
-.z-index-3{
-    z-index: 3;
-}
+    padding: .2em 1em;
+    font-size: 1.4em;
 
-.z-index-4{
-    z-index: 4;
+    border-radius: 0.2em;
+    border-color: var(--button-colour);
+    border-width: 0.15em;
+    border-style: solid;
+
+    transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out;
+    // transition: all 0.3s ease;
+
+    &:hover{
+        background-color: var(--button-colour);
+        color: var(--button-colour-text);
+        transform: scale(0.98);
+        border-radius: 0.5em;
+    }
+    &:active{
+        transform: scale(0.92);
+    }
 }
 
 .nav-bar {
@@ -157,6 +171,17 @@ section{
     .nav-header{
         display: flex;
         place-content: space-between;
+    }
+
+    .nav-desktop{
+        .nav-name-logo{
+            transition: all 0.4s ease-out;
+
+            &:hover{
+                color: var(--text-colour-mid);
+                transform: scale(1.01);
+            }
+        }
     }
 
     .nav-mobile-menu{
@@ -217,6 +242,12 @@ section{
             text-decoration: none;
             color: var(--text-colour-light);
             font-size: 1.8em;
+
+            transition: all 0.4s ease-out;
+
+            &:hover{
+                color: var(--text-colour-mid);
+            }
         }
 
         .nav-mobile-style{
@@ -239,18 +270,19 @@ section{
             padding-left: 0.5em;
             margin-left: 0.5em;
         }   
+    }
 
-        li{
-            a{
-                color: var(--text-colour-light);
-                font-family: "Roboto Mono";
-                font-size: 1.5em;
-                display: block;
-                padding: 0.5em;
+    li{
+        a{
+            color: var(--text-colour-light);
+            font-family: "Roboto Mono";
+            font-size: 1.5em;
+            display: block;
+            padding: 0.5em;
+            transition: all 0.4s ease-out;
 
-                &:hover{
-                    color: var(--text-colour-mid);
-                }
+            &:hover{
+                color: var(--text-colour-mid);
             }
         }
     }
@@ -260,7 +292,16 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 98vh;
+    height: 100vh;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+
+    .container{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70%;
+    }
 
     .hero-splash{
         color: var(--text-colour-mid);
@@ -342,34 +383,55 @@ section{
     }
     
     .hero-cta {
-        padding-top: 10vh;
         display: flex;
         justify-content: center;
         align-items: center;
-    
-        .primary-cta
-        {
-            text-align: center;
-            color: var(--button-colour);
-            padding: .2em 1em;
-            font-size: 1.4em;
-            border-radius: 0.2em;
-            border-color: var(--button-colour);
-            border-width: 0.15em;
-            border-style: solid;
-            transition: background-color 0.2s linear 0.1s , color 0.2s linear 0s;
-            transition: all 0.1s ease;
+    }
 
-            &:hover{
-                background-color: var(--button-colour);
-                color: var(--button-colour-text);
-                transform: scale(0.98);
-                border-radius: 0.5em;
+    .hero-mouse{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-content: center;
+
+        a{
+            align-self: center;
+        }
+
+        .hero-scroll{
+            position: relative;
+            width: 20px;
+            height: 30px;
+            box-shadow: inset 0 0 0 2px var(--button-colour);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all .25s;
+
+            &::after{
+                content: '';
+                width: 4px;
+                height: 6px;
+                position: absolute;
+                top: 8px;
+                left: 50%;
+                transform: translateX(-50%);
+                border-radius: 50%;
+                
+                background: var(--button-colour);
+
+                animation: mouse 1.7s infinite;
             }
-            &:active{
-                transform: scale(0.92);
+
+            @keyframes mouse{
+                0%{
+                    transform: translate(-50%, 0);
+                }
+                50%{
+                    transform: translate(-50%, 7px);
+                }
             }
         }
+
     }
 }
 
@@ -377,6 +439,11 @@ section{
     position: relative;
     width: 100%;
     box-sizing: border-box;
+    background-color: transparent;
+
+    .container{
+        padding: 2rem;
+    }
 
     .about-text{
         margin: 1em;
@@ -391,7 +458,12 @@ section{
         .about-main{
             display: table-cell;
             vertical-align: middle;
+            padding: 1rem;
         }
+    }
+
+    .about-minor-style{
+        padding: 1rem;
     }
 
     .about-col-minor{
@@ -493,7 +565,6 @@ section{
     }
 
     .work-main-sub{
-        color: var(--text-colour-mid);
         font-weight: 300;
     }
 
@@ -526,6 +597,8 @@ section{
 
     .work-sub{
         color: var(--text-colour-mid);
+        font-family: "Roboto Mono";
+        font-size: 1em;
         margin:  0;
         padding: 0;
     }
@@ -549,6 +622,10 @@ section{
         transition: all 0.5s ease;
         
         cursor: pointer;
+
+        .portfolio-template-container{
+            height: 100%;
+        }
     
         &:hover{
             transform: scale(1.05);
@@ -630,10 +707,42 @@ section{
     }
 }
 
+.portfolio-header{
+    padding: 0;
+    margin: 1em 0;
+    .portfolio-header-logo img{
+        display: inline-block;
+        width: 4rem;
+    }
+}
+
 .portfolio{
     background-color: var(--primary-colour);
     margin: 0;
     padding: 0;
+
+    h2{
+        color: white;
+        font-weight: 400;
+        font-size: 1.3rem;
+
+        &::after{
+            display: block;
+            content: '';
+            margin-top: 1em;
+            width: 3em;
+            height: 3px;
+            background: currentColor;
+            border-radius: 1em;
+        }
+    }
+
+    p{
+        color: white;
+        font-weight: 300;
+        font-size: 1.3em;
+        text-align: justify;
+    }
 
     .portfolio-text-main{
         overflow: hidden;
@@ -641,7 +750,7 @@ section{
         margin: 2em 0;
     }
 
-    .portfolio-image{
+    .portfolio-image-header{
         display: block;
         width: 100%;
     }
@@ -669,6 +778,101 @@ section{
         }
     }
 
+    .portfolio-container{
+        margin-top: 3em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        justify-content: left;
+        place-items: top center;
+
+        .portfolio-content{
+            margin-right: 3em;
+        }
+    }
+
+    .portfolio-overview{
+        margin: 3em;
+        width: auto;
+
+        .portfolio-image{
+            display: block;
+            text-align: center;
+            height: auto;
+            width: 100%;
+            border-radius: 0.5rem;
+        }
+    }
+
+    .portfolio-design{
+        width: auto;
+        background: linear-gradient(45deg, rgba(61,53,130,1) 0%, rgba(42,38,109,1) 100%);
+        
+        .portfolio-design-header{
+            padding: 3em;
+        }
+
+        .portfolio-design-image img{
+            width: 100%;
+        }
+
+        .portfolio-design-footer{
+            padding: 3em;
+
+                
+            &::before{
+                display: block;
+                content: '';
+                width: 3em;
+                height: 3px;
+                background: white;
+                border-radius: 1em;
+            }
+        }
+    }
+
+    .portfolio-mockup{
+        width: auto;
+        margin-top: 3em;
+
+        .portfolio-image{
+            display: inline;
+            margin: 0 auto;
+            width: 100%;  
+            text-align: center;
+        }
+        .portfolio-container{
+            margin: 3em;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .portfolio-content{
+            width: auto;
+            background: white;
+            height: 500px;
+            border-radius: 0.5rem;
+            transition: all .3s ease;
+
+            &:hover{
+                transform: scale(0.95);
+            }
+        }
+    }
+
+    .portfolio-responsive{
+        width: auto;
+        margin: 3em;
+
+        .portfolio-video{
+            width: 40vw;
+            max-width: 100%;
+            max-height: 100%;
+        }    
+        
+    }
+
+
+
 
 }
 
@@ -688,7 +892,9 @@ section{
     }
 
     .hobbies-sub{
-        color: var(--text-colour-light);
+        color: var(--text-colour-mid);
+        font-family: "Roboto Mono";
+        font-size: 1em;
         margin:  0;
         padding: 0;
     }
@@ -698,8 +904,6 @@ section{
     }
 
     .hobbies-mobile-images{
-        //width:  80vw;
-        //height: auto;
         overflow: hidden;
 
         .hobbies-mobile-photography{
@@ -849,32 +1053,6 @@ section{
         display: flex;
         justify-content: center;
         align-items: center;
-
-        .contact-resume-button{
-            text-align: center;
-            color: var(--button-colour);
-    
-            padding: .2em 1em;
-            font-size: 1.6em;
-        
-            border-radius: 0.2em;
-            border-color: var(--button-colour);
-            border-width: 0.15em;
-            border-style: solid;
-
-            transition: background-color 0.2s linear 0.1s , color 0.2s linear 0s;
-            transition: all 0.3s ease;
-
-            &:hover{
-                background-color: var(--button-colour);
-                color: var(--button-colour-text);
-                transform: scale(0.98);
-                border-radius: 0.5em;
-            }
-            &:active{
-                transform: scale(0.92);
-            }
-        }
     }
 
     .contact-info-social{
@@ -911,6 +1089,7 @@ section{
 
 .footer{
     background-color: var(--primary-colour-dark);
+    padding: 1.5rem;
 
     .footer-text{
         color: white;
@@ -959,7 +1138,7 @@ section{
         font-size: 5em;
     }
 
-    h5{
+    h2{
         font-size: 3.5em;
     }
     p{
@@ -1099,7 +1278,7 @@ section{
 
         .work-main-sub{
             font-size: 1.2em;
-            margin: 2em;
+            margin: 1.5rem 0;
         }
 
         .work-down{
@@ -1418,6 +1597,9 @@ section{
         fill: var(--text-colour-dark);
     }
 
+    .work-main-sub{
+        color: #575757;
+    }
     
     .work-down{
         stroke:var(--text-colour-dark);
@@ -1464,6 +1646,10 @@ section{
 
     .about-wave{
         fill: var(--text-colour-light);
+    }
+
+    .work-main-sub{
+        color: var(--text-colour-mid);
     }
 
     .work-down{

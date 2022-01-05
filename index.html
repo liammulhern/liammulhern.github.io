@@ -41,39 +41,45 @@
                     <a class="nav-name-logo" href="#">Liam Mulhern</a>
                     <div class="nav-desktop-content">
                         <ul id="nav-desktop-content">
-                            <li><a href="#home">home</a></li>
-                            <li><a href="#about">about</a></li>
-                            <li><a href="#work">work</a></li>
-                            <li><a href="#hobbies">hobbies</a></li>
-                            <li><a href="#contact">contact</a></li>
+                            <li><a href="#home">["home",</a></li>
+                            <li><a href="#about">"about",</a></li>
+                            <li><a href="#work">"work",</a></li>
+                            <li><a href="#hobbies">"hobbies",</a></li>
+                            <li><a href="#contact">"contact"]</a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
         </div>
-        <section id="home" class="hero">
+        <section id="home" class="hero outro-opacity-scroll" data-speed="2">
             <div class="container">
-                <div class="hero-splash">
+                <div class="hero-splash intro-fade-in intro-slide-up">
                     <div class="heading-mobile">
-                        <h2 id="typewriter" class="heading-mobile-text text-bg"></h2>
+                        <h4 id="typewriter" class="heading-mobile-text text-bg"></h4>
                     </div>
                     <div class="heading-desktop">
                         <p class="text-mid"><span class="cst">const</span> <span class="str">vector</span>&lt;<span class="str">string</span>&gt; home {</p>
                             <div class="heading-desktop-style">
-                                <h2 id="typewriter2" class="heading-desktop-text text-mid"></h2>
+                                <h4 id="typewriter2" class="heading-desktop-text text-mid"></h4>
                             </div>
                         <p class="text-mid">};</p>
                     </div>
                 </div>
-                <div class="hero-cta">
-                    <a href="#about" class="primary-cta">Who am I?</a>
+                <div class="hero-cta intro-fade-in intro-slide-up">
+                    <a href="#contact" class="primary-cta button">Contact Me!</a>
+                </div>
+                <div class="hero-mouse intro-fade-in intro-slide-up">
+                    <a href="#about">
+                        <div class="hero-scroll">
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section id="about" class="about">
+        <section class="about intro-opacity-scroll" data-delay="50%" data-speed="3">
             <div class="container">
-                <h1 class="text-bg">about</h1>
+                <h1 id="about" class="text-bg">about</h1>
                 <div class="about-text">
                     <div class="about-col intro-fade-in intro-slide-up">
                         <div class="about-profile">
@@ -112,23 +118,23 @@
                     </div>
                     <div class="about-col-minor intro-fade-in intro-slide-up">
                         <div class="about-minor-style">
-                            <p class="about-minor">Based in Brisbane, Australia, I have a love for all things technology, creativity, and engineering. I recently graduated from Holy Spirit College, Mackay, in 2021 with an ATAR of 99.05.</p>
-                            <p class="about-minor">My results are not only testament to my self-motivated, enthusiatic, and perserveant attitude, but a benchmark for how I apply myself to all ventures.</p>
+                            <p class="about-minor">Based in Brisbane, Australia, I have a love for all things technology, creativity, and engineering. I recently graduated from Holy Spirit College, Mackay, in 2021 with an ATAR of 98.85.</p>
+                            <p class="about-minor">My results are not only testament to my self-motivated, enthusiastic, and perseverant attitude, but a benchmark for how I apply myself to all ventures.</p>
                         </div>
                     </div>
                     <div class="about-col-minor intro-fade-in intro-slide-up">
                         <div class="about-minor-style">
-                            <p class="about-minor">Through a combination of leadership experiences and a passion for problem solving, my distinctive stratergies  help me maintain productivity in team environments.</p>
-                            <p class="about-minor">With my ever evolving skillset I foster productive teams in collaborative environments that meet the requirements of creatives and developers.</p>
+                            <p class="about-minor">Through a combination of leadership experiences and a passion for problem solving, my distinctive strategies help me maintain productivity in team environments.</p>
+                            <p class="about-minor">With my ever-evolving skillset I foster productive teams in collaborative environments that meet the requirements of creatives and developers.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="work" class="work">
+        <section class="work intro-opacity-scroll" data-delay="50%" data-speed="2">
             <div class="container">
-                <h1 class="text-bg">work</h1>
+                <h1 id="work" class="text-bg">work</h1>
                 <div class="work-text intro-fade-in intro-slide-up">
                     <p class="work-main text-bg">I’ve always considered myself a curious guy and these projects are testament to that. I have pursued these ideas out of my general enjoyment for all things engineering, computer science, and design. I am self-taught in all areas but have the knowledge to apply and expand upon these areas in future ventures.</p>
                     <p class="work-main-sub text-mid">Feel free to have a look at some of my work, or click the arrow to skip to my other hobbies.</p>
@@ -141,18 +147,18 @@
                         </svg>
                     </a>
                 </div>
-                <div class="work-software">
+                <div class="work-software intro-opacity-scroll" data-delay="50%" data-speed="4">
                     <div class="work-text-portfolio">
-                        <p class="work-sub">&lt;title&gt;</p>
-                        <h5 class="text-bg">Software Development</h5>
-                        <p class="work-sub">&lt;/title&gt;</p>
+                        <p class="work-sub">&lt;h2&gt;</p>
+                        <h2 class="text-bg">Software Development</h2>
+                        <p class="work-sub">&lt;/h2&gt;</p>
                     </div>
                     <div class="work-portfolio work-software-portfolio">
                         <ul>
                             <li>
-                                <a href="website_development.html">
-                                    <div class="portfolio-template portfolio-colour-a z-index-1">
-                                        <div class="intro-fade-in intro-slide-up">
+                                <a href="work.html">
+                                    <div class="portfolio-template portfolio-colour-a">
+                                        <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                             <p class="portfolio-header">HTML / JS / CSS</p>
                                             <p class="portfolio-main">Website Development</p>
                                             <div class="portfolio-image">
@@ -163,8 +169,8 @@
                                 </a>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-b z-index-2">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-b">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">C# / Unity 3D</p>
                                         <p class="portfolio-main">Mobile Developement</p>
                                         <div class="portfolio-image">
@@ -174,8 +180,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-d z-index-3">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-d">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">C#</p>
                                         <p class="portfolio-main">Image 2 Excel</p>
                                         <div class="portfolio-image">
@@ -185,8 +191,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-c z-index-4">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-c">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">C++</p>
                                         <p class="portfolio-main">Graph Theory Algorithms</p>
                                         <div class="portfolio-image">
@@ -198,17 +204,17 @@
                         </ul>
                     </div>
                 </div>
-                <div class="work-hardware">
+                <div class="work-hardware intro-opacity-scroll" data-delay="50%" data-speed="4">
                     <div class="work-text-portfolio">
-                        <p class="work-sub">&lt;title&gt;</p>
-                        <h5 class="text-bg">Hardware Integration</h5>
-                        <p class="work-sub">&lt;/title&gt;</p>
+                        <p class="work-sub">&lt;h2&gt;</p>
+                        <h2 class="text-bg">Hardware Integration</h2>
+                        <p class="work-sub">&lt;/h2&gt;</p>
                     </div>
                     <div class="work-portfolio work-hardware-portfolio">
                         <ul>
                             <li>
-                                <div class="portfolio-template portfolio-colour-d z-index-1">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-d">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">Arduino Pro Micro</p>
                                         <p class="portfolio-main">MIDI Photo Frame</p>
                                         <div class="portfolio-image">
@@ -217,8 +223,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-e z-index-2">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-e">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">ESP8266</p>
                                         <p class="portfolio-main">Music Reactive Neopixels</p>
                                         <div class="portfolio-image">
@@ -227,8 +233,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-f z-index-3">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-f">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">LM 358</p>
                                         <p class="portfolio-main">Adjustable Low Pass Filter</p>
                                         <div class="portfolio-image">
@@ -237,8 +243,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-h z-index-4">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-h">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">ESP32</p>
                                         <p class="portfolio-main">OBDII Vehicle Dashboard</p>
                                         <div class="portfolio-image">
@@ -251,18 +257,18 @@
                     </div>
                 </div>
 
-                <div class="work-design">
+                <div class="work-design intro-opacity-scroll" data-delay="50%" data-speed="4">
                     <div class="work-text-portfolio">
-                        <p class="work-sub">&lt;title&gt;</p>
-                        <h5 class="text-bg">Design &amp; CAD</h5>
-                        <p class="work-sub">&lt;/title&gt;</p>
+                        <p class="work-sub">&lt;h2&gt;</p>
+                        <h2 class="text-bg">Design &amp; CAD</h2>
+                        <p class="work-sub">&lt;/h2&gt;</p>
                     </div>
 
                     <div class="work-portfolio work-hardware-portfolio">
                         <ul>
                             <li>
-                                <div class="portfolio-template portfolio-colour-g z-index-1">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-g">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">CAD &amp; Designing Identity</p>
                                         <p class="portfolio-main">Formula 1 In School</p>
                                         <div class="portfolio-image">
@@ -272,8 +278,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-d z-index-2">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-d">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">Senior Design Case Studies</p>
                                         <p class="portfolio-main">QCAA Design Portfolios 2020 &amp; 2021</p>
                                         <div class="portfolio-image">
@@ -283,8 +289,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-b z-index-3">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-b">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">CAD</p>
                                         <p class="portfolio-main">Multi Axis Hydraulic Claw</p>
                                         <div class="portfolio-image">
@@ -294,8 +300,8 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-a z-index-4">
-                                    <div class="intro-fade-in intro-slide-up">
+                                <div class="portfolio-template portfolio-colour-a">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
                                         <p class="portfolio-header">CAD</p>
                                         <p class="portfolio-main">WiFi LED Lamp</p>
                                         <div class="portfolio-image">
@@ -311,16 +317,16 @@
             </div>
         </section>
 
-        <section id="hobbies" class="hobbies">
+        <section class="hobbies intro-opacity-scroll">
             <div class="container">
-                <h1 class="text-bg">hobbies</h1>
+                <h1 id="hobbies" class="text-bg">hobbies</h1>
                 <div class="hobbies-content">
                     <div class="hobbies-left-col">
                         <div class="hobbies-photography">
                             <div class="hobbies-header">
-                                <p class="hobbies-sub">&lt;title&gt;</p>
-                                <h5 class="text-bg">Photography</h5>
-                                <p class="hobbies-sub">&lt;/title&gt;</p>
+                                <p class="hobbies-sub">&lt;h2&gt;</p>
+                                <h2 class="text-bg">Photography</h2>
+                                <p class="hobbies-sub">&lt;/h2&gt;</p>
                             </div>
                             <div class="hobbies-photography-text intro-fade-in intro-slide-right">
                                 <p class="text-bg hobbies-text">Photography is another recent mainstay in my collection of hobbies. Whether it be landscape, street, or just chilling with my friends, film photography offers me a creative outlet to spend time... and way too much money on <span> :p </span></p>
@@ -348,9 +354,9 @@
                         </div>
                         <div class="hobbies-art">
                             <div class="hobbies-header">
-                                <p class="hobbies-sub">&lt;title&gt;</p>
-                                <h5 class="text-bg">Art</h5>
-                                <p class="hobbies-sub">&lt;/title&gt;</p>
+                                <p class="hobbies-sub">&lt;h2&gt;</p>
+                                <h2 class="text-bg">Art</h2>
+                                <p class="hobbies-sub">&lt;/h2&gt;</p>
                             </div>
                             <div class="hobbies-art-text intro-fade-in intro-slide-right">
                                 <p class="text-bg hobbies-text">I also draw! I try to stick to a monochromatic colour palette and take inspiration from pop culture, macabre line art, and anything that I take an interest to.</p>
@@ -431,13 +437,13 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section class="contact intro-opacity-scroll">
             <div class="container">
-                <h1 class="text-bg">contact</h1>
+                <h1 id="contact" class="text-bg">contact</h1>
                 <div class="contact-info">
                     <div class="contact-text intro-fade-in intro-slide-up">
-                        <h2 class="contact-text-heading text-bg">Want to know more?..</h2>
-                        <p  class="contact-text-sub text-bg">Feel free to email or send me a message on Instagram, Facebook, or LinkedIn. For more information on my programming and personal projects check out my Github profile.</p>
+                        <h3 class="contact-text-heading text-bg">Want to know more?..</h3>
+                        <p  class="contact-text-sub text-bg">Feel free to email or send me a message on LinkedIn, Facebook, or Instagram. For more information on my programming and personal projects check out my Github profile.</p>
                     </div>
                     <div class="contact-email intro-fade-in intro-slide-up text-bg">
                         <div class="contact-email-container">
@@ -445,18 +451,13 @@
                         </div>
                     </div>
                     <div class="contact-resume intro-fade-in intro-slide-up">
-                        <a class="contact-resume-button" href="downloads/Liam Mulhern Resume 2021.pdf" download>Resume</a>
+                        <a class="contact-resume-button button" href="downloads/Liam Mulhern Resume 2021.pdf" download>Resume</a>
                     </div>
                     <div class="contact-info-social intro-fade-in intro-slide-up">
                         <ul class="content">
                             <li>
-                                <a href="https://www.instagram.com/liammulhern/" target="_blank">
-                                    <ion-icon class="contact-logo contact-instagram text-bg" name="logo-instagram"></ion-icon>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://www.facebook.com/liam.mulhern.03/" target="_blank">
-                                    <ion-icon class="contact-logo contact-facebook text-bg" name="logo-facebook"></ion-icon>
+                                <a href="https://www.linkedin.com/in/liam-mulhern/" target="_blank">
+                                    <ion-icon class="contact-logo contact-linkedin text-bg" name="logo-linkedin"></ion-icon>
                                 </a>
                             </li>
                             <li>
@@ -465,8 +466,13 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
-                                    <ion-icon class="contact-logo contact-linkedin text-bg" name="logo-linkedin"></ion-icon>
+                                <a href="https://www.facebook.com/liam.mulhern.03/" target="_blank">
+                                    <ion-icon class="contact-logo contact-facebook text-bg" name="logo-facebook"></ion-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/liammulhern/" target="_blank">
+                                    <ion-icon class="contact-logo contact-instagram text-bg" name="logo-instagram"></ion-icon>
                                 </a>
                             </li>
                         </ul>
@@ -485,13 +491,12 @@
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
         <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
         <script src="/js/scroll-drag.js"></script>
-        <!-- <script src="/js/image-scroll.js"></script> -->
         <script src="/js/typewriter.js"></script>
         <script src="/js/nav-scroll.js"></script>
         <script src="/js/nav.js"></script>
         <script src="/js/scroll-observer.js"></script>
+        <script src="/js/scroll-opactiy.js"></script>
     </body>
 </html>
