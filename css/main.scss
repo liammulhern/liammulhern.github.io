@@ -332,9 +332,7 @@ li{
     }
 }
 
-#demo-canvas {
-    background: var(--primary-colour);
-  }
+
 
 .home{
     display: flex;
@@ -429,10 +427,7 @@ li{
 
             .heading-dekstop-taskbar{
                 height: 80px;
-                // width: 100%;
                 border-bottom: 1px var(--text-colour-mid) solid;
-                background: #1e1e1e80;
-
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
@@ -1648,6 +1643,10 @@ li{
         a{
             color: var(--text-colour-dark);
         }
+    }
+
+    .heading-desktop{
+        background: #161616 !important;
     }
     
     .text-bg{

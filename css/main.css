@@ -393,10 +393,6 @@ li {
   color: var(--text-colour-mid);
 }
 
-#demo-canvas {
-  background: var(--primary-colour);
-}
-
 .home {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -517,7 +513,6 @@ li {
 .home .home-splash .heading-desktop .heading-dekstop-taskbar {
   height: 80px;
   border-bottom: 1px var(--text-colour-mid) solid;
-  background: #1e1e1e80;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1955,6 +1950,9 @@ li {
   }
   .heading-desktop-text a, .heading-mobile-text a {
     color: var(--text-colour-dark);
+  }
+  .heading-desktop {
+    background: #161616 !important;
   }
   .text-bg {
     color: var(--text-colour-dark);
