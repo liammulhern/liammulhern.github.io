@@ -9,7 +9,7 @@ new ScrollBooster({
     content: photoContent,
     bounce: true,
     textSelection: false,
-    //emulateScroll: true,
+    // emulateScroll: true,
     scrollMode: 'native',
     direction: 'horizontal',
 

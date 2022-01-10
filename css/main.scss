@@ -7,6 +7,10 @@
     --text-colour-light: white;
 }
 
+*{
+    cursor: none !important;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -17,6 +21,7 @@ body{
     margin: 0;
     font-family: 'Poppins';
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 h1{
@@ -131,15 +136,14 @@ li{
     text-align: center;
     color: var(--button-colour);
 
-    padding: .2em 1em;
+    padding: .4em 1em;
     font-size: 1.4em;
+    font-family: 'Roboto Mono';
 
     border-radius: 0.2em;
-    border-color: var(--button-colour);
-    border-width: 0.15em;
-    border-style: solid;
+    border: 2px var(--button-colour) solid;
 
-    transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out;
+    transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out, transform 0.5s ease-out !important;
     // transition: all 0.3s ease;
 
     &:hover{
@@ -153,19 +157,44 @@ li{
     }
 }
 
+.cursor{
+    overflow: hidden;
+    position: fixed;
+    z-index: 10000;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: white;
+    top: 0;
+    left: 0;
+    transition: transform 0.15s ease, top 0.05s ease-out, left 0.05s ease-out;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+.interactable{
+    transition: transform 0.5s ease-out;
+    &:hover{
+        transform: scale(1.05);
+    }
+}
+
 .nav-bar {
-    background: var(--primary-colour-dark);
-    padding: 1em;
-    margin: auto;
     position: fixed;
     width: 100%;
-    top: 0;
+    top: -80px;
     z-index: 10;
-    clip-path: polygon(0 0, 100% 0, 100% 17%, 0 17%);
-    transition: all 0.5s ease-in-out;
+    transition: top 0.5s ease-out;
+    pointer-events: none;
     
     &.menu-open{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        .nav-mobile-dropdown{
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%) !important;
+        }
+        .nav-bar, .nav-mobile-dropdown{
+            pointer-events: all !important;
+        }
     }
 
     .nav-header{
@@ -174,6 +203,14 @@ li{
     }
 
     .nav-desktop{
+        background: var(--portfolio-colour-c);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        pointer-events: all !important;
+
         .nav-name-logo{
             transition: all 0.4s ease-out;
 
@@ -184,64 +221,27 @@ li{
         }
     }
 
-    .nav-mobile-menu{
-        margin-right: 1em;
-        padding-right: 1em;
-        float: right;
-        width: 2.3em;
-        cursor: pointer;
-
-        transition: all 0.1s ease;
-
-        &:hover{
-            transform: scale(0.98);
-        }
-        &:active{
-            transform: scale(0.88);
-        }
-
-        &.menu-open{
-            display: none;
-        }
-    }
-
-    .nav-mobile-exit{
-        display: none;
-        margin-right: 1em;
-        padding-right: 1em;
-        float: right;
-        width: 2.3em;
-        cursor: pointer;
-
-        transition: all 0.1s ease;
-
-        &:hover{
-            transform: scale(0.98);
-        }
-        &:active{
-            transform: scale(0.88);
-        }
-
-        &.menu-open{
-            display: block;
-        }
-    }
-
-    .nav-mobile-dropdown{
-        margin-top: 1em;
-    }
-
     .nav-mobile{
-        background: var(--primary-colour-dark);
         width: 100%;
-        padding-left: 0.5em;
         text-align: left;
-        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .nav-mobile-header{
+            background: var(--portfolio-colour-c);
+            // align-self: center;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            pointer-events: all;
+        }
 
         .nav-name-logo{
             text-decoration: none;
             color: var(--text-colour-light);
             font-size: 1.8em;
+            align-self: flex-start;
 
             transition: all 0.4s ease-out;
 
@@ -270,17 +270,61 @@ li{
             padding-left: 0.5em;
             margin-left: 0.5em;
         }   
+
+        .nav-mobile-dropdown{
+            background: var(--portfolio-colour-c);
+            padding: 1rem;
+            transition: clip-path 0.5s ease-in-out;
+            clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
+        }
+
+        .nav-mobile-menu{
+            width: 2.3em;
+            cursor: pointer;
+    
+            transition: all 0.1s ease;
+    
+            &:hover{
+                transform: scale(0.98);
+            }
+            &:active{
+                transform: scale(0.88);
+            }
+    
+            &.menu-open{
+                display: none;
+            }
+        }
+    
+        .nav-mobile-exit{
+            display: none;
+            width: 2.3em;
+            cursor: pointer;
+    
+            transition: all 0.1s ease;
+    
+            &:hover{
+                transform: scale(0.98);
+            }
+            &:active{
+                transform: scale(0.88);
+            }
+    
+            &.menu-open{
+                display: block;
+            }
+        }
     }
 
     li{
+        padding: 0.5em;
         a{
             color: var(--text-colour-light);
             font-family: "Roboto Mono";
             font-size: 1.5em;
             display: block;
-            padding: 0.5em;
             transition: all 0.4s ease-out;
-
+            padding: 0;
             &:hover{
                 color: var(--text-colour-mid);
             }
@@ -288,22 +332,32 @@ li{
     }
 }
 
-.hero{
+#demo-canvas {
+    background: var(--primary-colour);
+  }
+
+.home{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0%, 100% 110%, 0% 110%);
+
+    .home-animation{
+        width: 100%;
+        height: 100%;
+    }
 
     .container{
         position: fixed;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 70%;
+        height: 85%;
     }
 
-    .hero-splash{
+    .home-splash{
+        margin-top: 2rem;
         color: var(--text-colour-mid);
         font-family: 'Roboto Mono';
         text-align: left;
@@ -330,9 +384,33 @@ li{
             }   
         }
 
+        .heading-desktop-name, .heading-mobile-name{
+            font-family: 'Roboto Mono';
+            margin: 0px;
+            font-weight: 400;
+            width: fit-content;
+            color: #529952;
+
+            span{
+                font-weight: 500;
+                color: #529952;
+                transition: transform 0.2s ease-out;
+
+                &:hover{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+
         .heading-desktop{
-            width: 80vw;
-            height: 40vh;
+            background: #1e1e1e80;
+            width: 85vw;
+            border: 1px var(--text-colour-mid) solid;
+            border-radius: 0.5rem;
+            height: fit-content;
+            min-height: 50vh;
+            overflow: hidden;
 
             .cst{
                 color: #476eff;
@@ -346,13 +424,51 @@ li{
                 padding-left: 1em;
                 border-left: 2px dashed var(--text-colour-mid);
                 margin-left: 0.5em;
+            }
 
+            .heading-dekstop-taskbar{
+                height: 80px;
+                // width: 100%;
+                border-bottom: 1px var(--text-colour-mid) solid;
+                background: #1e1e1e80;
+
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 1rem;
+
+                p{
+                    color: var(--text-colour-light);
+                    align-self: center;
+                }
+
+                a{
+                    justify-self: right;
+                    align-self: center;
+                    img{
+                        height: 30px;
+                    }
+                }
+            }
+
+            .heading-desktop-window{
+                padding: 2rem;
+
+                p{
+                    width: fit-content;
+                }
+            }
+
+            .heading-desktop-name{
+                font-size: 2rem;
             }
 
             .heading-desktop-text{
                 font-family: 'Roboto Mono';
                 font-weight: 400;
                 margin: 0;
+                width: fit-content;
+                transform-origin: left;
                 overflow-wrap: break-word;
                 white-space: pre-wrap;
                 line-height: 150%;
@@ -382,13 +498,15 @@ li{
         }
     }
     
-    .hero-cta {
+    .home-cta {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: fit-content;
+        align-self: center;
     }
 
-    .hero-mouse{
+    .home-mouse{
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -398,7 +516,7 @@ li{
             align-self: center;
         }
 
-        .hero-scroll{
+        .home-scroll{
             position: relative;
             width: 20px;
             height: 30px;
@@ -406,6 +524,10 @@ li{
             border-radius: 25px;
             cursor: pointer;
             transition: all .25s;
+
+            &:hover{
+                transform: scale(1.1);
+            }
 
             &::after{
                 content: '';
@@ -417,7 +539,7 @@ li{
                 transform: translateX(-50%);
                 border-radius: 50%;
                 
-                background: var(--button-colour);
+                background-color: var(--button-colour);
 
                 animation: mouse 1.7s infinite;
             }
@@ -443,17 +565,38 @@ li{
 
     .container{
         padding: 2rem;
+        z-index: 1;
+        position: relative;
     }
 
     .about-text{
-        margin: 1em;
+        display: flex;
+        align-content: center;
+        justify-content: right;
+        flex-direction: column; 
+        flex-wrap: wrap;
+    }
+
+    .about-col, .about-col-minor{
+        display: table;
+        width: 100%;
+        padding: 0.5em;
+        // justify-self: end;
+    }
+
+    .about-col-major{
+        flex: 1 1 10em;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .about-col-minor{
+        flex: 1 1 20em;
     }
 
     .about-col{
-        display: table;
-        width: 100%;
-        height: 100%;
-        padding: 0.5em;
+        flex: 1 1 20em;
+        align-self: center;
 
         .about-main{
             display: table-cell;
@@ -464,13 +607,6 @@ li{
 
     .about-minor-style{
         padding: 1rem;
-    }
-
-    .about-col-minor{
-        display: table;
-        width: 100%;
-        height: 100%;
-        padding: 0.5em;
     }
 
     .about-profile{
@@ -528,7 +664,7 @@ li{
         height: 100%;
         content: '';
         background: var(--primary-colour-about);
-        z-index: -1;
+        z-index: 0;
         top: 0;
         right: 0;
         bottom: 0;
@@ -544,6 +680,10 @@ li{
     padding-left: 0;
     padding-right: 0;
 
+    h2{
+        width: fit-content;
+    }
+
     .work-software{
         .work-text-portfolio{
             margin-top: 0;
@@ -555,6 +695,9 @@ li{
         padding-top: 0;
         padding-left: 3em;
         padding-right: 3em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: justify;
         text-align-last: center;
     }
@@ -573,8 +716,7 @@ li{
     }
 
     .work-down{
-        display:  block;
-        margin: auto;
+        // margin: auto;
         width: 5em;
         cursor:pointer;
         transition: all 1s ease;
@@ -598,6 +740,7 @@ li{
     .work-sub{
         color: var(--text-colour-mid);
         font-family: "Roboto Mono";
+        transform: translateX(-10px);
         font-size: 1em;
         margin:  0;
         padding: 0;
@@ -627,9 +770,9 @@ li{
             height: 100%;
         }
     
-        &:hover{
-            transform: scale(1.05);
-        }
+        // &:hover{
+        //     transform: scale(1.05);
+        // }
     
         img{
             height: auto;
@@ -883,6 +1026,11 @@ li{
     padding-top: 5em;
     padding: 3em;
 
+    .hobbies-header{
+        width: fit-content;
+        transform: translateX(10px);
+    }
+
     .hobbies-art{
         padding-top: 3em;
     }
@@ -894,6 +1042,7 @@ li{
     .hobbies-sub{
         color: var(--text-colour-mid);
         font-family: "Roboto Mono";
+        transform: translateX(-10px);
         font-size: 1em;
         margin:  0;
         padding: 0;
@@ -905,33 +1054,49 @@ li{
 
     .hobbies-mobile-images{
         overflow: hidden;
+        height: 40vh;
+        // height: fit-content;
+        // scroll-snap-type: x;
+        // scroll-behavior: smooth;
 
         .hobbies-mobile-photography{
             display: flex;
+            flex-direction: row;
             overflow: visible;
             width: fit-content;
+            height: 100%;
         }
 
         .hobbies-mobile-art{
             display: flex;
+            flex-direction: row;
             overflow: visible;
-            width: fit-content;
+            // width: fit-content;
+            height: 100%;
         }
  
         li{
-            display: inline-block;
-            margin-right: 1em;
-            margin-left: 0px;
-            width: 50vw;
+            height: 100%;
+            scroll-snap-align: center;
+            // margin: 0.5rem;
+            // max-width: 30vw;
+            // display: inline-block;
+            // width: fit-content;
+            // width: 100%;
             transition: all .3s ease;
+            list-style: none;
 
             img{
-                max-width: 100%;
-                height: 90%;
-                display: inline-block;
+                // max-height: 100%;
+                // height: 100%;
+                // width: auto;
+                // display: inline-block;
+                height: 95%;
                 border: 3px solid var(--text-colour-light);
                 border-radius: 1em;
                 pointer-events: none;
+                transition: transform 0.3s ease, border-radius 0.3s ease;
+                margin: 0.5rem;
             }
 
             &:hover{
@@ -1100,28 +1265,27 @@ li{
 
 @media screen and (max-width: 700px) {
     .nav-desktop{
-        display: none;
+        display: none !important;
     }
+
+    .home-mouse{
+        display: none !important;
+    }
+
     .heading-desktop{
         display: none;
     }
     
     .hobbies-right-col{
-        display:  none;
+        display: none;
     }
 
     .hobbies-down{
-        display:  block;
+        display: block;
     }
 
     .contact-email-button{
         font-size: 1.2em;
-    }
-
-    .about-text{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
     }
 
     .about-minor{
@@ -1154,15 +1318,10 @@ li{
     }
     
     .nav-mobile{
-        display: none;
-    }
-
-    .nav-bar{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        display: none !important;
     }
 
     .nav-desktop{
-        display: block;
 
         .nav-name-logo{
             color: var(--text-colour-light);
@@ -1173,12 +1332,9 @@ li{
         }
 
         .nav-desktop-content{
-            float: right;
             width: fit-content;
             list-style: none;
             list-style-type: none;
-            padding: 0;
-            margin-right: 2em;
             text-align: right;
 
             li{
@@ -1189,8 +1345,11 @@ li{
                 display: block;
                 font-size: 1em;
                 font-family: 'Roboto Mono';
-                padding: 1em 2vw;
                 color: var(--text-colour-light);
+
+                span{
+                    color: var(--text-colour-mid);
+                }
 
                 &:hover{
                     color: var(--text-colour-mid);
@@ -1200,12 +1359,6 @@ li{
     }
 
     .about-text{
-        margin: 1em;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        justify-content: center;
-        place-items: end center;
-
         .about-col, .about-col-minor{
             margin: 1em;
         }
@@ -1259,7 +1412,7 @@ li{
     h1{
         font-size: 6em;
     }
-
+    
     .about-minor-style{
         display: table-cell;
         vertical-align: top;
@@ -1314,67 +1467,64 @@ li{
     
         .hobbies-left-col{
             width: 100%;
-            margin-left: 5vw;
-            margin-right: 5vw;
-            display: inline-block;
         }
 
-        .hobbies-right-col{
-            display: inline-block;
-            width: 50vw;
-            margin-left: 5vw;
-            margin-right: 5vw;
     
-            .images-left-col{
+        .hobbies-right-col{
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            // max-height: 150vh;
+
+            .images-left-col, .images-right-col{
+                // height: 100%;
                 width: 100%;
-                margin: 2em;
+                max-width: 10vw;
+                margin: 0 0.5rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
     
                 ul{
+                    display: flex;
+                    justify-content: space-between;
+                    flex-direction: column;
                     overflow: hidden;
-                    transform: translateY(-5%);
+                    background: var(--text-colour-light);
+                    border-radius: 1em;
+                    margin: 0.5rem 0;
+
+                    li{
+                        padding: 0.5rem;
+                        display: flex;
+                        justify-content: center;
+
+                        img{
+                            width: 100%;
+                            border-radius: 0.5em;
+                            transition: border-radius 0.3s ease, transform 0.3s ease;
+        
+                            &:hover{
+                                border-radius: 0.5em;
+                                transform: scale(0.95);
+                            }
+                            &:active{
+                                transform: scale(0.92);
+                            }
+        
+                        }
+                    }
                 }
             }
+
             .images-right-col{
-                width: 100%;
-                margin: 2em;
-    
-                ul{
-                    overflow: hidden;
-                    transform: translateY(10%);
-                }
+                transform: translateY(10%);
             }
     
             .images{
                 display: flex;
                 justify-content: center;
-    
-                ul{
-                    background: var(--text-colour-light);
-                    border-radius: 1em;
-                    padding: 0.8em;
-                    margin: 2em;
-
-    
-                    li{
-                        padding: 0.4em;
-                    }
-                }
-    
-                img{
-                    border-radius: 0.5em;
-                    width: 100%;
-                    height: auto;
-                    overflow: hidden;
-                    transition: all .3s ease;
-
-                    &:hover{
-                        border-radius: 0.5em;
-                        transform: scale(0.95);
-                    }
-                    &:active{
-                        transform: scale(0.92);
-                    }
-                }
+                margin: 2rem;
             }
         }
     }
@@ -1400,11 +1550,6 @@ li{
 
 @media screen and (min-width: 1290px){
     .about-text{
-        margin: 1em;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        justify-content: center;
-        place-items: end center;
 
         .about-col{
             margin: 1em;
@@ -1416,6 +1561,12 @@ li{
     }
 }
 
+@media screen and (min-width: 1580px){
+    .about-text{
+        flex-direction: row !important; 
+    }
+}
+
 @media screen and (max-height: 300px){
     .heading-mobile{
         font-size: 0.8em;
@@ -1424,105 +1575,6 @@ li{
 
     .heading-desktop{
         display: none;
-    }
-}
-
-@media screen and (max-height: 900px) and (min-width: 1000px){
-    .hobbies{
-        .container{
-            margin: 3em;
-        }
-
-        h1{
-            margin-top: 1em;
-        }
-
-        .hobbies-mobile-images{
-            display: none;
-        }
-
-        .hobbies-art{
-            margin-top: 10%;
-        }
-    
-        .hobbies-content{
-            display: flex;
-            justify-content: left;
-        }
-
-        .hobbies-centre{
-            padding-top: 3em;
-        }
-    
-        .hobbies-left-col{
-            width: 100%;
-            margin-left: 5em;
-            display: inline-block;
-        }
-
-    
-        .hobbies-right-col{
-            display: inline-block;
-            width: 50vw;
-    
-            .images-left-col{
-                width: 100%;
-                margin: 2em;
-    
-                ul{
-                    overflow: hidden;
-                    margin: 0;
-                    transform: translateY(-5%);
-                }
-            }
-            .images-right-col{
-                width: 100%;
-                margin: 2em;
-                overflow: hidden;
-    
-                ul{
-                    overflow: hidden;
-                    margin: 0;
-                    transform: translateY(10%);
-                }
-            }
-    
-            .images{
-                display: flex;
-                justify-content: center;
-    
-                ul{
-                    overflow: hidden;
-                    background: var(--text-colour-light);
-                    border-radius: 1em;
-                    padding: 0.8em;
-                    margin: 2em;
-
-    
-                    li{
-                        padding: 0.4em;
-                    }
-                }
-    
-                img{
-                    border-radius: 0.5em;
-                    width: 100%;
-                    height: auto;
-                    overflow: hidden;
-                    transition: all .3s ease;
-
-                    &:hover{
-                        border-radius: 0.5em;
-                        transform: scale(0.95);
-                    }
-                    &:active{
-                        transform: scale(0.92);
-                    }
-
-                }
-            }
-    
-        }
     }
 }
 
@@ -1564,7 +1616,7 @@ li{
     
         --primary-colour-dark: #161616;
     
-        --text-colour-span: var(--text-colour-dark);
+        --text-colour-span: var(--text-colour-light);
     
         --button-colour: var(--text-colour-dark);
         --button-colour-text: var(--text-colour-light);

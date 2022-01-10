@@ -21,125 +21,145 @@
             <div class="container">
                 <nav class="nav-mobile">
                     <div class="nav-mobile-header">
-                        <a class="nav-name-logo" href="#">Liam Mulhern</a>
-                        <img id="nav-mobile-menu" class="nav-mobile-menu" src="images/menu.svg" alt="Open Menu Navigation">
-                        <img id="nav-mobile-exit" class="nav-mobile-exit" src="images/cross.svg" alt="Close Menu Navigation">
+                        <a class="nav-name-logo interactable" href="#">Liam Mulhern</a>
+                        <img id="nav-mobile-menu" class="nav-mobile-menu interactable" src="images/menu.svg" alt="Open Menu Navigation">
+                        <img id="nav-mobile-exit" class="nav-mobile-exit interactable" src="images/cross.svg" alt="Close Menu Navigation">
                     </div>
                     <div class="nav-mobile-dropdown">
                         <p class="nav-mobile-style"><span class="cst">const</span> <span class="str">vector</span>&lt;<span class="str">string</span>&gt; nav {</p>
                             <ul id="nav-mobile-content" class="nav-mobile-content">
-                                <li><a href="#home">"home",</a></li>
-                                <li><a href="#about">"about",</a></li>
-                                <li><a href="#work">"work",</a></li>
-                                <li><a href="#hobbies">"hobbies",</a></li>
-                                <li><a href="#contact">"contact"</a></li>
+                                <li><a class="interactable" href="#home">"home",</a></li>
+                                <li><a class="interactable" href="#about">"about",</a></li>
+                                <li><a class="interactable" href="#work">"work",</a></li>
+                                <li><a class="interactable" href="#hobbies">"hobbies",</a></li>
+                                <li><a class="interactable" href="#contact">"contact"</a></li>
                             </ul>
                         <p class="nav-mobile-style">};</p>
                     </div>
                 </nav>
                 <nav class="nav-desktop">
-                    <a class="nav-name-logo" href="#">Liam Mulhern</a>
+                    <a class="nav-name-logo interactable" href="#">Liam Mulhern</a>
                     <div class="nav-desktop-content">
                         <ul id="nav-desktop-content">
-                            <li><a href="#home">["home",</a></li>
-                            <li><a href="#about">"about",</a></li>
-                            <li><a href="#work">"work",</a></li>
-                            <li><a href="#hobbies">"hobbies",</a></li>
-                            <li><a href="#contact">"contact"]</a></li>
+                            <li><a class="interactable" href="#home"> ["<span class="interactable">home</span>",</a></li>
+                            <li><a class="interactable" href="#about">"<span class="interactable">about</span>",</a></li>
+                            <li><a class="interactable" href="#work">"<span class="interactable">work</span>",</a></li>
+                            <li><a class="interactable" href="#hobbies">"<span class="interactable">hobbies</span>",</a></li>
+                            <li><a class="interactable" href="#contact">"<span class="interactable">contact</span>"]</a></li>
                         </ul>
                     </div>
                 </nav>
             </div>
         </div>
-        <section id="home" class="hero outro-opacity-scroll" data-speed="2">
+        <div class="cursor"></div>
+
+
+        <section id="home" class="home outro-opacity-scroll" data-opacitySpeed="1.5">
+            <div class="container home-animation">
+                <div id="large-header" class="large-header">
+                    <canvas id="demo-canvas"></canvas>
+                </div>
+            </div>  
+
             <div class="container">
-                <div class="hero-splash intro-fade-in intro-slide-up">
+                <div class="home-splash intro-fade-in intro-slide-up">
                     <div class="heading-mobile">
-                        <h4 id="typewriter" class="heading-mobile-text text-bg"></h4>
+                        <h4 class="heading-mobile-name interactable">//Hi! I'm <span class="interactable">Liam Mulhern</span></h4>
+                        <h4 id="heading-mobile-type" class="heading-mobile-text text-bg"></h4>
                     </div>
                     <div class="heading-desktop">
-                        <p class="text-mid"><span class="cst">const</span> <span class="str">vector</span>&lt;<span class="str">string</span>&gt; home {</p>
-                            <div class="heading-desktop-style">
-                                <h4 id="typewriter2" class="heading-desktop-text text-mid"></h4>
-                            </div>
-                        <p class="text-mid">};</p>
+                        <div class="heading-dekstop-taskbar">
+                            <p class="interactable">Website_Header.cpp</p>
+                            <a href="#about"><img class="interactable" src="images/cross.svg" alt="Close Menu"></a> 
+                        </div>
+                        <div class="heading-desktop-window">
+                            <h4 class="heading-desktop-name interactable">//Hi! I'm <span class="interactable">Liam Mulhern</span></h4>
+                            <p class="text-mid interactable"><span class="cst interactable">const</span> <span class="str interactable">vector</span>&lt;<span class="str interactable">string</span>&gt; home {</p>
+                                <div class="heading-desktop-style">
+                                    <h4 id="heading-desktop-type" class="heading-desktop-text text-mid interactable"></h4>
+                                </div>
+                            <p class="text-mid interactable">};</p>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-cta intro-fade-in intro-slide-up">
-                    <a href="#contact" class="primary-cta button">Contact Me!</a>
+                <div class="home-cta intro-fade-in intro-slide-up">
+                    <a href="#contact" class="primary-cta button interactable">Contact Me!</a>
                 </div>
-                <div class="hero-mouse intro-fade-in intro-slide-up">
+                <div class="home-mouse intro-fade-in intro-slide-up">
                     <a href="#about">
-                        <div class="hero-scroll">
+                        <div class="home-scroll interactable">
                         </div>
                     </a>
                 </div>
             </div>
         </section>
-
-        <section class="about intro-opacity-scroll" data-delay="50%" data-speed="3">
-            <div class="container">
+        <section class="about">
+            <div class="container intro-opacity-scroll"  data-opacityDelay="30%" data-opacitySpeed="1.5">
                 <h1 id="about" class="text-bg">about</h1>
                 <div class="about-text">
-                    <div class="about-col intro-fade-in intro-slide-up">
-                        <div class="about-profile">
-                            <img class="about-profile-image" src="images/Instagram Profile.jpg" alt="Liam Mulhern Profile Image">
+                    <div class="about-col-major">
+                        <div class="about-col intro-fade-in intro-slide-up">
+                            <div class="about-profile">
+                                <img class="about-profile-image interactable" src="images/Instagram Profile.jpg" alt="Liam Mulhern Profile Image">
+                            </div>
                         </div>
-                    </div>
-                    <div class="about-col intro-fade-in intro-slide-up">
-                        <p class="about-main text-bg">Hello
-                        <svg class="about-wave" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                            <g>
+                        <div class="about-col intro-fade-in intro-slide-up">
+                            <p class="about-main text-bg interactable">Hello
+                            <svg class="about-wave" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                                 <g>
-                                    <path d="M486,389.1c-7.3,15.9-16,30.9-27.8,44c-17.6,19.6-38.6,34.1-63.3,43.1c-8,2.9-15.5-0.5-18.3-8c-2.6-7.1,0.9-14.7,8.6-17.7
-                                        c34.3-13.1,59-36.3,74.2-69.8c2.5-5.5,6.8-8.7,12.9-8.7c7.4,0,11.3,4.5,13.7,10.8C486,384.9,486,387,486,389.1z"/>
-                                    <path d="M371,53.7c35.3-18.6,73.6,11.6,67.6,48.2c1,0.3,2.1,0.7,3.2,1c33.3,9.8,44.1,50,20.2,75c-5.9,6.1-12,12-18.4,18.3
-                                        c1,0.6,1.6,1.2,2.3,1.5c28.2,14.7,34,49.8,11.5,72.5c-28.9,29.2-58.2,58.1-87.3,87.1c-20.3,20.2-40,41.3-61.3,60.3
-                                        c-35,31.2-76.7,44.8-123.5,41.5c-77.6-5.5-140.6-61.4-155.3-137.8c-7.1-37.3-2.4-73.3,14.7-107.2C63.9,176.2,80.4,137.3,91,96.1
-                                        c1.8-7.1,3.4-14.2,5.1-21.3c6.4-27.5,32.4-44.1,59.3-37.8c26.7,6.2,42.7,32.8,36.1,60.4c-4.4,18.6-9,37.1-13.5,55.7
-                                        c-0.2,1-0.4,2-0.6,3c0.6,0.5,1.1,1,1.7,1.5c0.8-1.5,1.2-3.2,2.3-4.3c37.6-37.7,75.7-74.8,112.6-113.1
-                                        c23.6-24.4,62.8-18.4,76.1,12.6C370.4,53,370.7,53.4,371,53.7z M53.8,289.5c1.2,9.8,1.9,19.6,3.8,29.2
-                                        c12.3,63.5,70.7,112.3,135.2,113.4c41.6,0.7,77.1-13.6,106.5-43c29.3-29.2,58.6-58.5,87.9-87.7c16.9-16.9,33.9-33.7,50.8-50.6
-                                        c5.2-5.2,6.9-11.5,4.5-18.5c-2.3-6.7-7.3-10.4-14.3-11.3c-6.1-0.8-11,1.7-15.2,6c-18.8,18.8-37.7,37.6-56.5,56.3
-                                        c-4.9,4.8-9.7,9.8-14.7,14.5c-4,3.8-8.9,4.7-14.1,3c-5.1-1.7-8.1-5.6-9-10.8c-0.9-5.5,1.6-9.7,5.5-13.5
-                                        c39-38.8,78-77.6,116.9-116.4c8.1-8.1,8.6-18.4,1.2-25.8c-7.4-7.5-18-7.2-26.2,1c-8.2,8.1-16.3,16.2-24.5,24.4
-                                        c-26.8,26.7-53.6,53.3-80.3,80.1c-4.2,4.2-9,6.4-14.9,4.8c-10.6-3-13.2-15.6-4.9-23.9c22.1-22.1,44.2-44.1,66.4-66.1
-                                        c16-15.9,32-31.8,47.9-47.8c8.7-8.8,7.3-21.6-2.9-28c-7.2-4.6-15.8-3.2-22.7,3.7c-37.4,37.4-74.8,74.8-112.2,112.2
-                                        c-1.3,1.3-2.5,2.6-4,3.6c-8.2,5.9-19.8,1.2-21.5-8.8c-0.9-5.3,1.2-9.5,4.9-13.3c18.4-18.3,36.8-36.7,55.2-55.1
-                                        c12.8-12.8,25.7-25.5,38.3-38.4c9.3-9.5,6-24.5-6.2-28.9c-7.8-2.8-14.2-0.3-19.9,5.4C264.6,108.9,214.5,159,164.4,209
-                                        c-1.4,1.4-2.7,2.8-4.3,3.9c-6.3,4.7-14.3,3.5-19-2.7c-3.4-4.5-3.1-9.3-1.9-14.5c8.5-34.8,16.9-69.6,25.4-104.4
-                                        c3.2-13.1-3.3-24.7-15.3-27.6c-12-2.9-23.5,4.3-26.3,16.9c-10.9,50.4-29,98-52.8,143.6C59.6,244.6,54.5,266.4,53.8,289.5z"/>
-                                    <path d="M442.2,361.4c-0.3,0.9-0.6,3.1-1.5,5.1c-14.5,31.6-37.9,53.4-70.7,65c-8,2.8-15.7-0.7-18.3-8c-2.6-7.4,1.1-15,9.1-17.8
-                                        c25.5-9.1,43.7-26.1,55-50.7c3.1-6.7,9.1-9.8,15.6-8.4C437.9,348,442.2,353.3,442.2,361.4z"/>
+                                    <g>
+                                        <path d="M486,389.1c-7.3,15.9-16,30.9-27.8,44c-17.6,19.6-38.6,34.1-63.3,43.1c-8,2.9-15.5-0.5-18.3-8c-2.6-7.1,0.9-14.7,8.6-17.7
+                                            c34.3-13.1,59-36.3,74.2-69.8c2.5-5.5,6.8-8.7,12.9-8.7c7.4,0,11.3,4.5,13.7,10.8C486,384.9,486,387,486,389.1z"/>
+                                        <path d="M371,53.7c35.3-18.6,73.6,11.6,67.6,48.2c1,0.3,2.1,0.7,3.2,1c33.3,9.8,44.1,50,20.2,75c-5.9,6.1-12,12-18.4,18.3
+                                            c1,0.6,1.6,1.2,2.3,1.5c28.2,14.7,34,49.8,11.5,72.5c-28.9,29.2-58.2,58.1-87.3,87.1c-20.3,20.2-40,41.3-61.3,60.3
+                                            c-35,31.2-76.7,44.8-123.5,41.5c-77.6-5.5-140.6-61.4-155.3-137.8c-7.1-37.3-2.4-73.3,14.7-107.2C63.9,176.2,80.4,137.3,91,96.1
+                                            c1.8-7.1,3.4-14.2,5.1-21.3c6.4-27.5,32.4-44.1,59.3-37.8c26.7,6.2,42.7,32.8,36.1,60.4c-4.4,18.6-9,37.1-13.5,55.7
+                                            c-0.2,1-0.4,2-0.6,3c0.6,0.5,1.1,1,1.7,1.5c0.8-1.5,1.2-3.2,2.3-4.3c37.6-37.7,75.7-74.8,112.6-113.1
+                                            c23.6-24.4,62.8-18.4,76.1,12.6C370.4,53,370.7,53.4,371,53.7z M53.8,289.5c1.2,9.8,1.9,19.6,3.8,29.2
+                                            c12.3,63.5,70.7,112.3,135.2,113.4c41.6,0.7,77.1-13.6,106.5-43c29.3-29.2,58.6-58.5,87.9-87.7c16.9-16.9,33.9-33.7,50.8-50.6
+                                            c5.2-5.2,6.9-11.5,4.5-18.5c-2.3-6.7-7.3-10.4-14.3-11.3c-6.1-0.8-11,1.7-15.2,6c-18.8,18.8-37.7,37.6-56.5,56.3
+                                            c-4.9,4.8-9.7,9.8-14.7,14.5c-4,3.8-8.9,4.7-14.1,3c-5.1-1.7-8.1-5.6-9-10.8c-0.9-5.5,1.6-9.7,5.5-13.5
+                                            c39-38.8,78-77.6,116.9-116.4c8.1-8.1,8.6-18.4,1.2-25.8c-7.4-7.5-18-7.2-26.2,1c-8.2,8.1-16.3,16.2-24.5,24.4
+                                            c-26.8,26.7-53.6,53.3-80.3,80.1c-4.2,4.2-9,6.4-14.9,4.8c-10.6-3-13.2-15.6-4.9-23.9c22.1-22.1,44.2-44.1,66.4-66.1
+                                            c16-15.9,32-31.8,47.9-47.8c8.7-8.8,7.3-21.6-2.9-28c-7.2-4.6-15.8-3.2-22.7,3.7c-37.4,37.4-74.8,74.8-112.2,112.2
+                                            c-1.3,1.3-2.5,2.6-4,3.6c-8.2,5.9-19.8,1.2-21.5-8.8c-0.9-5.3,1.2-9.5,4.9-13.3c18.4-18.3,36.8-36.7,55.2-55.1
+                                            c12.8-12.8,25.7-25.5,38.3-38.4c9.3-9.5,6-24.5-6.2-28.9c-7.8-2.8-14.2-0.3-19.9,5.4C264.6,108.9,214.5,159,164.4,209
+                                            c-1.4,1.4-2.7,2.8-4.3,3.9c-6.3,4.7-14.3,3.5-19-2.7c-3.4-4.5-3.1-9.3-1.9-14.5c8.5-34.8,16.9-69.6,25.4-104.4
+                                            c3.2-13.1-3.3-24.7-15.3-27.6c-12-2.9-23.5,4.3-26.3,16.9c-10.9,50.4-29,98-52.8,143.6C59.6,244.6,54.5,266.4,53.8,289.5z"/>
+                                        <path d="M442.2,361.4c-0.3,0.9-0.6,3.1-1.5,5.1c-14.5,31.6-37.9,53.4-70.7,65c-8,2.8-15.7-0.7-18.3-8c-2.6-7.4,1.1-15,9.1-17.8
+                                            c25.5-9.1,43.7-26.1,55-50.7c3.1-6.7,9.1-9.8,15.6-8.4C437.9,348,442.2,353.3,442.2,361.4z"/>
+                                    </g>
                                 </g>
-                            </g>
-                        </svg>
-                        <br> I’m Liam, under graduate currently studying engineering and computer science at the University of Queensland.</p>
-                    </div>
-                    <div class="about-col-minor intro-fade-in intro-slide-up">
-                        <div class="about-minor-style">
-                            <p class="about-minor">Based in Brisbane, Australia, I have a love for all things technology, creativity, and engineering. I recently graduated from Holy Spirit College, Mackay, in 2021 with an ATAR of 98.85.</p>
-                            <p class="about-minor">My results are not only testament to my self-motivated, enthusiastic, and perseverant attitude, but a benchmark for how I apply myself to all ventures.</p>
+                            </svg>
+                            <br> I’m Liam, under graduate currently studying engineering and computer science at the University of Queensland.</p>
                         </div>
                     </div>
-                    <div class="about-col-minor intro-fade-in intro-slide-up">
-                        <div class="about-minor-style">
-                            <p class="about-minor">Through a combination of leadership experiences and a passion for problem solving, my distinctive strategies help me maintain productivity in team environments.</p>
-                            <p class="about-minor">With my ever-evolving skillset I foster productive teams in collaborative environments that meet the requirements of creatives and developers.</p>
+                    <div class="about-col-major">
+                        <div class="about-col-minor intro-fade-in intro-slide-up">
+                            <div class="about-minor-style">
+                                <p class="about-minor interactable">Based in Brisbane, Australia, I have a love for all things technology, creativity, and engineering. I recently graduated from Holy Spirit College, Mackay, in 2021 with an ATAR of 98.85.</p>
+                                <p class="about-minor interactable">My results are not only testament to my self-motivated, enthusiastic, and perseverant attitude, but a benchmark for how I apply myself to all ventures.</p>
+                            </div>
+                        </div>
+                        <div class="about-col-minor intro-fade-in intro-slide-up">
+                            <div class="about-minor-style">
+                                <p class="about-minor interactable">Through a combination of leadership experiences and a passion for problem solving, my distinctive strategies help me maintain productivity in team environments.</p>
+                                <p class="about-minor interactable">With my ever-evolving skillset I foster productive teams in collaborative environments that meet the requirements of creatives and developers.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="work intro-opacity-scroll" data-delay="50%" data-speed="2">
+        <section class="work intro-opacity-scroll" data-opacityDelay="50%" data-opacitySpeed="2">
             <div class="container">
                 <h1 id="work" class="text-bg">work</h1>
                 <div class="work-text intro-fade-in intro-slide-up">
-                    <p class="work-main text-bg">I’ve always considered myself a curious guy and these projects are testament to that. I have pursued these ideas out of my general enjoyment for all things engineering, computer science, and design. I am self-taught in all areas but have the knowledge to apply and expand upon these areas in future ventures.</p>
-                    <p class="work-main-sub text-mid">Feel free to have a look at some of my work, or click the arrow to skip to my other hobbies.</p>
+                    <p class="work-main text-bg interactable">I’ve always considered myself a curious guy and these projects are testament to that. I have pursued these ideas out of my general enjoyment for all things engineering, computer science, and design. I am self-taught in all areas but have the knowledge to apply and expand upon these areas in future ventures.</p>
+                    <p class="work-main-sub text-mid interactable">Feel free to have a look at some of my work, or click the arrow to skip to my other hobbies.</p>
                     <a href="#hobbies">
-                        <svg class="work-down" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                        <svg class="work-down interactable" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
                             <style type="text/css">
                                 .st0{fill:none;stroke-width:17.1228;stroke-linecap:round;stroke-miterlimit:10;}
                             </style>
@@ -147,56 +167,56 @@
                         </svg>
                     </a>
                 </div>
-                <div class="work-software intro-opacity-scroll" data-delay="50%" data-speed="4">
+                <div class="work-software intro-opacity-scroll" data-opacityDelay="50%" data-opacitySpeed="4">
                     <div class="work-text-portfolio">
                         <p class="work-sub">&lt;h2&gt;</p>
-                        <h2 class="text-bg">Software Development</h2>
+                        <h2 class="text-bg interactable">Software Development</h2>
                         <p class="work-sub">&lt;/h2&gt;</p>
                     </div>
                     <div class="work-portfolio work-software-portfolio">
                         <ul>
                             <li>
-                                <a href="work.html">
-                                    <div class="portfolio-template portfolio-colour-a">
-                                        <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                            <p class="portfolio-header">HTML / JS / CSS</p>
-                                            <p class="portfolio-main">Website Development</p>
-                                            <div class="portfolio-image">
-                                                <img draggable="false" src="images/Website Mockup.png" alt="Website Developement On Laptop">
+                                <a>
+                                    <div class="portfolio-template portfolio-colour-a interactable">
+                                        <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                            <p class="portfolio-header interactable">HTML / JS / CSS</p>
+                                            <p class="portfolio-main interactable">Website Development</p>
+                                            <div class="portfolio-image interactable">
+                                                <img class="interactable" draggable="false" src="images/Website Mockup.png" alt="Website Developement On Laptop">
                                             </div>
                                         </div>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-b">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">C# / Unity 3D</p>
-                                        <p class="portfolio-main">Mobile Developement</p>
-                                        <div class="portfolio-image">
-                                            <img draggable="false" src="images/Mobile Mockup.png" alt="Mobile Developement On Phone">
+                                <div class="portfolio-template portfolio-colour-b interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">C# / Unity 3D</p>
+                                        <p class="portfolio-main interactable">Mobile Developement</p>
+                                        <div class="portfolio-image interactable">
+                                            <img class="interactable" draggable="false" src="images/Mobile Mockup.png" alt="Mobile Developement On Phone">
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-d">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">C#</p>
-                                        <p class="portfolio-main">Image 2 Excel</p>
-                                        <div class="portfolio-image">
-                                            <img draggable="false" src="images/Image 2 Excel.png" alt="Programing Developement In Visual Studio">
+                                <div class="portfolio-template portfolio-colour-d interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">C#</p>
+                                        <p class="portfolio-main interactable">Image 2 Excel</p>
+                                        <div class="portfolio-image interactable">
+                                            <img class="interactable" draggable="false" src="images/Image 2 Excel.png" alt="Programing Developement In Visual Studio">
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-c">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">C++</p>
-                                        <p class="portfolio-main">Graph Theory Algorithms</p>
-                                        <div class="portfolio-image">
-                                            <img draggable="false" src="images/Graph Mockup.png" alt="Programing Developement In Visual Studio">
+                                <div class="portfolio-template portfolio-colour-c interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">C++</p>
+                                        <p class="portfolio-main interactable">Graph Theory Algorithms</p>
+                                        <div class="portfolio-image interactable">
+                                            <img class="interactable" draggable="false" src="images/Graph Mockup.png" alt="Programing Developement In Visual Studio">
                                         </div>
                                     </div>
                                 </div>
@@ -204,51 +224,51 @@
                         </ul>
                     </div>
                 </div>
-                <div class="work-hardware intro-opacity-scroll" data-delay="50%" data-speed="4">
+                <div class="work-hardware intro-opacity-scroll" data-opacityDelay="50%" data-opacitySpeed="4">
                     <div class="work-text-portfolio">
                         <p class="work-sub">&lt;h2&gt;</p>
-                        <h2 class="text-bg">Hardware Integration</h2>
+                        <h2 class="text-bg interactable">Hardware Integration</h2>
                         <p class="work-sub">&lt;/h2&gt;</p>
                     </div>
                     <div class="work-portfolio work-hardware-portfolio">
                         <ul>
                             <li>
-                                <div class="portfolio-template portfolio-colour-d">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">Arduino Pro Micro</p>
-                                        <p class="portfolio-main">MIDI Photo Frame</p>
-                                        <div class="portfolio-image">
+                                <div class="portfolio-template portfolio-colour-d interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">Arduino Pro Micro</p>
+                                        <p class="portfolio-main interactable">MIDI Photo Frame</p>
+                                        <div class="portfolio-image interactable">
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-e">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">ESP8266</p>
-                                        <p class="portfolio-main">Music Reactive Neopixels</p>
-                                        <div class="portfolio-image">
+                                <div class="portfolio-template portfolio-colour-e interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">ESP8266</p>
+                                        <p class="portfolio-main interactable">Music Reactive Neopixels</p>
+                                        <div class="portfolio-image interactable">
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-f">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">LM 358</p>
-                                        <p class="portfolio-main">Adjustable Low Pass Filter</p>
-                                        <div class="portfolio-image">
+                                <div class="portfolio-template portfolio-colour-f interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">LM 358</p>
+                                        <p class="portfolio-main interactable">Adjustable Low Pass Filter</p>
+                                        <div class="portfolio-image interactable">
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-h">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">ESP32</p>
-                                        <p class="portfolio-main">OBDII Vehicle Dashboard</p>
-                                        <div class="portfolio-image">
-                                            <img draggable="false" src="images/Dashboard Mockup 2.png" alt="Dashboard User Interface">
+                                <div class="portfolio-template portfolio-colour-h interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">ESP32</p>
+                                        <p class="portfolio-main interactable">OBDII Vehicle Dashboard</p>
+                                        <div class="portfolio-image interactable">
+                                            <img class="interactable" draggable="false" src="images/Dashboard Mockup 2.png" alt="Dashboard User Interface">
                                         </div>
                                     </div>
                                 </div>
@@ -257,55 +277,55 @@
                     </div>
                 </div>
 
-                <div class="work-design intro-opacity-scroll" data-delay="50%" data-speed="4">
+                <div class="work-design intro-opacity-scroll" data-opacityDelay="50%" data-opacitySpeed="4">
                     <div class="work-text-portfolio">
                         <p class="work-sub">&lt;h2&gt;</p>
-                        <h2 class="text-bg">Design &amp; CAD</h2>
+                        <h2 class="text-bg interactable">Design &amp; CAD</h2>
                         <p class="work-sub">&lt;/h2&gt;</p>
                     </div>
 
                     <div class="work-portfolio work-hardware-portfolio">
                         <ul>
                             <li>
-                                <div class="portfolio-template portfolio-colour-g">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">CAD &amp; Designing Identity</p>
-                                        <p class="portfolio-main">Formula 1 In School</p>
-                                        <div class="portfolio-image">
-                                            <img draggable="false" src="images/F1 In School.png" alt="F1 In School Car Exploded View">
+                                <div class="portfolio-template portfolio-colour-g interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">CAD &amp; Designing Identity</p>
+                                        <p class="portfolio-main interactable">Formula 1 In School</p>
+                                        <div class="portfolio-image interactable">
+                                            <img class="interactable" draggable="false" src="images/F1 In School.png" alt="F1 In School Car Exploded View">
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-d">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">Senior Design Case Studies</p>
-                                        <p class="portfolio-main">QCAA Design Portfolios 2020 &amp; 2021</p>
-                                        <div class="portfolio-image">
-                                            <img draggable="false" src="images/QCAA Design.png" alt="QCAA Design Portfoilios">
+                                <div class="portfolio-template portfolio-colour-d interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">Senior Design Case Studies</p>
+                                        <p class="portfolio-main interactable">QCAA Design Portfolios 2020 &amp; 2021</p>
+                                        <div class="portfolio-image interactable">
+                                            <img class="interactable" draggable="false" src="images/QCAA Design.png" alt="QCAA Design Portfoilios">
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-b">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">CAD</p>
-                                        <p class="portfolio-main">Multi Axis Hydraulic Claw</p>
-                                        <div class="portfolio-image">
-                                            <img draggable="false" src="images/Hydraulic Arm 2.png" alt="Hyrdaulic Claw">
+                                <div class="portfolio-template portfolio-colour-b interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">CAD</p>
+                                        <p class="portfolio-main interactable">Multi Axis Hydraulic Claw</p>
+                                        <div class="portfolio-image interactable">
+                                            <img class="interactable" draggable="false" src="images/Hydraulic Arm 2.png" alt="Hyrdaulic Claw">
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <div class="portfolio-template portfolio-colour-a">
-                                    <div class="portfolio-template-container intro-fade-in intro-slide-up">
-                                        <p class="portfolio-header">CAD</p>
-                                        <p class="portfolio-main">WiFi LED Lamp</p>
-                                        <div class="portfolio-image">
-                                            <img draggable="false" src="images/Lamp 3.png" alt="Wifi Enable LED Lamp Render">
+                                <div class="portfolio-template portfolio-colour-a interactable">
+                                    <div class="portfolio-template-container intro-fade-in intro-slide-up interactable">
+                                        <p class="portfolio-header interactable">CAD</p>
+                                        <p class="portfolio-main interactable">WiFi LED Lamp</p>
+                                        <div class="portfolio-image interactable">
+                                            <img class="interactable" draggable="false" src="images/Lamp 3.png" alt="Wifi Enable LED Lamp Render">
                                         </div>
                                     </div>
                                 </div>
@@ -325,28 +345,28 @@
                         <div class="hobbies-photography">
                             <div class="hobbies-header">
                                 <p class="hobbies-sub">&lt;h2&gt;</p>
-                                <h2 class="text-bg">Photography</h2>
+                                <h2 class="text-bg interactable">Photography</h2>
                                 <p class="hobbies-sub">&lt;/h2&gt;</p>
                             </div>
                             <div class="hobbies-photography-text intro-fade-in intro-slide-right">
-                                <p class="text-bg hobbies-text">Photography is another recent mainstay in my collection of hobbies. Whether it be landscape, street, or just chilling with my friends, film photography offers me a creative outlet to spend time... and way too much money on <span> :p </span></p>
-                                <p class="text-bg hobbies-text">I’m currently shooting with an Olympus OM 10, Kodak Gold 200, and a Zuiko 50mm f/1.8 lens.</p>
+                                <p class="text-bg hobbies-text interactable">Photography is another recent mainstay in my collection of hobbies. Whether it be landscape, street, or just chilling with my friends, film photography offers me a creative outlet to spend time... and way too much money on <span> :p </span></p>
+                                <p class="text-bg hobbies-text interactable">I’m currently shooting with an Olympus OM 10, Kodak Gold 200, and a Zuiko 50mm f/1.8 lens.</p>
                             </div>
                             <div class="hobbies-mobile-images intro-fade-in intro-slide-right viewport">
                                 <ul class="hobbies-mobile-photography scrollable-content">
-                                    <li>
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Photography_Image 1.jpg" alt="Photograph of House With Flowers">
                                     </li>
-                                    <li>
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Photography_Image 2.jpg" alt="Photograph of Botanical Gardens">
                                     </li>
-                                    <li>
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Photography_Image 3.jpg" alt="Photograph of High Rise">
                                     </li>
-                                    <li>
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Photography_Image 4.jpg" alt="Photograph of Sign on Riverfront">
                                     </li>
-                                    <li>
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Photography_Image 5.jpg" alt="Photograph of Electricity Pole">
                                     </li>
                                 </ul>
@@ -355,35 +375,35 @@
                         <div class="hobbies-art">
                             <div class="hobbies-header">
                                 <p class="hobbies-sub">&lt;h2&gt;</p>
-                                <h2 class="text-bg">Art</h2>
+                                <h2 class="text-bg interactable">Art</h2>
                                 <p class="hobbies-sub">&lt;/h2&gt;</p>
                             </div>
                             <div class="hobbies-art-text intro-fade-in intro-slide-right">
-                                <p class="text-bg hobbies-text">I also draw! I try to stick to a monochromatic colour palette and take inspiration from pop culture, macabre line art, and anything that I take an interest to.</p>
+                                <p class="text-bg hobbies-text interactable">I also draw! I try to stick to a monochromatic colour palette and take inspiration from pop culture, macabre line art, and anything that I take an interest to.</p>
                             </div>
                             <div class="hobbies-mobile-images intro-fade-in intro-slide-right viewport" >
-                                <ul class="hobbies-mobile-art scrollable-content">
-                                    <li>
+                                <div class="hobbies-mobile-art scrollable-content">
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Art_Image 1.jpg" alt="Image of Broken Daft Punk Helmet">
                                     </li>
-                                    <li>
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Art_Image 6.jpg" alt="Image of Broken Cassette">
                                     </li>
-                                    <li>
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Art_Image 3.jpg" alt="Image of Skeletons Dancing">
                                     </li>
-                                    <li>
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Art_Image 7.jpg" alt="Image of Skeleton Hand Chef Kiss">
                                     </li>
-                                    <li>
+                                    <li class="interactable">
                                         <img draggable="false" src="images/Art_Image 5.jpg" alt="Image of Heart Constructed From Waves">
                                     </li>
-                                </ul>
+                                </div>
                             </div>
                         </div>
 
                         <div class="hobbies-centre">
-                            <p class="text-bg hobbies-text">If you like what I do here, check below and follow me on Instagram. I swear I post... occasionally <span>^_^"</span></p>
+                            <p class="text-bg hobbies-text interactable">If you like what I do here, check below and follow me on Instagram. I swear I post... occasionally <span>^_^"</span></p>
                             <a href="#contact"><img class="hobbies-down" src="images/down.svg" alt="Down Arrow"></a>
                         </div>
                     </div>
@@ -392,42 +412,42 @@
                             <div class="images-left-col">
                                 <ul>
                                     <li class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Photography_Image 1.jpg" alt="Photograph of House With Flowers">
+                                        <img class="interactable" draggable="false" src="images/Photography_Image 1.jpg" alt="Photograph of House With Flowers">
                                     </li>
                                     <li  class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Photography_Image 2.jpg" alt="Photograph of Botanical Gardens">
+                                        <img class="interactable" draggable="false" src="images/Photography_Image 2.jpg" alt="Photograph of Botanical Gardens">
                                     </li>
                                     <li  class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Photography_Image 3.jpg" alt="Photograph of High Rise">
+                                        <img class="interactable" draggable="false" src="images/Photography_Image 3.jpg" alt="Photograph of High Rise">
                                     </li>
                                 </ul>
                                 <ul>
                                     <li  class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Art_Image 1.jpg" alt="Image of Broken Daft Punk Helmet">
+                                        <img class="interactable" draggable="false" src="images/Art_Image 1.jpg" alt="Image of Broken Daft Punk Helmet">
                                     </li>
                                     <li  class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Art_Image 7.jpg" alt="Image of Broken Cassette">
+                                        <img class="interactable" draggable="false" src="images/Art_Image 7.jpg" alt="Image of Broken Cassette">
                                     </li>
                                 </ul>
                             </div>
                             <div class="images-right-col">
                                 <ul>
                                     <li  class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Photography_Image 4.jpg" alt="Photograph of Sign on Riverfront">
+                                        <img class="interactable" draggable="false" src="images/Photography_Image 4.jpg" alt="Photograph of Sign on Riverfront">
                                     </li>
                                     <li  class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Photography_Image 5.jpg" alt="Photograph of Electricity Pole">
+                                        <img class="interactable" draggable="false" src="images/Photography_Image 5.jpg" alt="Photograph of Electricity Pole">
                                     </li>
                                 </ul>
                                 <ul>
                                     <li class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Art_Image 3.jpg" alt="Image of Skeletons Dancing">
+                                        <img class="interactable" draggable="false" src="images/Art_Image 3.jpg" alt="Image of Skeletons Dancing">
                                     </li>
                                     <li class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Art_Image 6.jpg" alt="Image of Skeleton Hand Chef Kiss">
+                                        <img class="interactable" draggable="false" src="images/Art_Image 6.jpg" alt="Image of Skeleton Hand Chef Kiss">
                                     </li>
                                     <li class="intro-fade-in intro-slide-up">
-                                        <img draggable="false" src="images/Art_Image 5.jpg" alt="Image of Heart Constructed From Waves">
+                                        <img class="interactable" draggable="false" src="images/Art_Image 5.jpg" alt="Image of Heart Constructed From Waves">
                                     </li>
                                 </ul>
                             </div>
@@ -442,37 +462,37 @@
                 <h1 id="contact" class="text-bg">contact</h1>
                 <div class="contact-info">
                     <div class="contact-text intro-fade-in intro-slide-up">
-                        <h3 class="contact-text-heading text-bg">Want to know more?..</h3>
-                        <p  class="contact-text-sub text-bg">Feel free to email or send me a message on LinkedIn, Facebook, or Instagram. For more information on my programming and personal projects check out my Github profile.</p>
+                        <h3 class="contact-text-heading text-bg interactable">Want to know more?..</h3>
+                        <p  class="contact-text-sub text-bg interactable">Feel free to email or send me a message on LinkedIn, Facebook, or Instagram. For more information on my programming and personal projects check out my Github profile.</p>
                     </div>
                     <div class="contact-email intro-fade-in intro-slide-up text-bg">
                         <div class="contact-email-container">
-                            <a class="contact-email-button text-bg" href="mailto:liam.mulhern@outlook.com">liam​.mulhern​@​outlook​.com</a>
+                            <a class="contact-email-button text-bg interactable" href="mailto:liam.mulhern@outlook.com">liam​.mulhern​@​outlook​.com</a>
                         </div>
                     </div>
                     <div class="contact-resume intro-fade-in intro-slide-up">
-                        <a class="contact-resume-button button" href="downloads/Liam Mulhern Resume 2021.pdf" download>Resume</a>
+                        <a class="contact-resume-button button interactable" href="downloads/Liam Mulhern Resume 2021.pdf" download>Resume</a>
                     </div>
                     <div class="contact-info-social intro-fade-in intro-slide-up">
                         <ul class="content">
                             <li>
                                 <a href="https://www.linkedin.com/in/liam-mulhern/" target="_blank">
-                                    <ion-icon class="contact-logo contact-linkedin text-bg" name="logo-linkedin"></ion-icon>
+                                    <ion-icon class="contact-logo contact-linkedin text-bg interactable" name="logo-linkedin"></ion-icon>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://github.com/liammulhern" target="_blank">
-                                    <ion-icon class="contact-logo contact-github text-bg" name="logo-github"></ion-icon>
+                                    <ion-icon class="contact-logo contact-github text-bg interactable" name="logo-github"></ion-icon>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.facebook.com/liam.mulhern.03/" target="_blank">
-                                    <ion-icon class="contact-logo contact-facebook text-bg" name="logo-facebook"></ion-icon>
+                                    <ion-icon class="contact-logo contact-facebook text-bg interactable" name="logo-facebook"></ion-icon>
                                 </a>
                             </li>
                             <li>
                                 <a href="https://www.instagram.com/liammulhern/" target="_blank">
-                                    <ion-icon class="contact-logo contact-instagram text-bg" name="logo-instagram"></ion-icon>
+                                    <ion-icon class="contact-logo contact-instagram text-bg interactable" name="logo-instagram"></ion-icon>
                                 </a>
                             </li>
                         </ul>
@@ -492,10 +512,17 @@
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="https://unpkg.com/scrollbooster@2/dist/scrollbooster.min.js"></script>
-        <script src="/js/scroll-drag.js"></script>
+        <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script> -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"></script>
+        <script src="/js/hero.js"></script>
+
         <script src="/js/typewriter.js"></script>
-        <script src="/js/nav-scroll.js"></script>
         <script src="/js/nav.js"></script>
+        <script src="/js/mouse.js"></script>
+        <script src="/js/scroll-drag.js"></script>
         <script src="/js/scroll-observer.js"></script>
         <script src="/js/scroll-opactiy.js"></script>
     </body>

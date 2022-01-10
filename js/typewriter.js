@@ -10,26 +10,17 @@ var typer = function(html_element, text, period){
 };
 
 var textArray1 = [
-    "Console.​Write​Line​(“˹Hi (^∇^)!˺”);",
-    "print('˹​I’m Liam Mulhern˺')",
     "std::cout ``​ “​˹Engineer,​ Computer Scientist, and...˺”;",
-    "console​.​log(​“˹Certified Geek :p˺”);",
+    "console​.​log(​“˹Certified Geek˺”);",
     "System​.​out​.​println​(“˹So Go On!.. Have A Look˺”);",
-    "Serial.​println​(“˹Loading​...˺”);",
-    "printf(“⬑​You're still here? It's Over. Go Home. Go...⬏”);  ",
-    "std::exit(˹​Null˺);",
-    "Program.​restart();"
+    "std::exit​(˹​Null˺);",
 ];
 
 var textArray2 = [
-    "Console.​Write​Line​(“˹Hi (^∇^)!˺”); ↵↵print('˹I’m Liam Mulhern˺')",
-    "std::cout ``​ “˹Aspiring Engineer, Computer Scientist, and...˺”;",
-    "console​.​log​(“˹Certified Geek :p˺”);",
+    "std::cout ``​ “˹Undergraduate Engineer, Computer Scientist, and...˺”;",
+    "console​.​log​(“˹Certified Geek˺”);",
     "System​.​out​.​println​(“˹So Go On!.. Have A Look Around!˺”);",
-    "Serial.​println​(“˹Loading​...˺”);",
-    "$(“body”).append​(“⬑​You're still here? It's Over. Go Home. Go...⬏”);      ",
     "std::exit​(˹​Null˺);",
-    "Program.​restart();"
 ];
 
 var writingTag = false;
@@ -37,7 +28,6 @@ var writingTag = false;
 typer.prototype.tick = function(){
     var i = this.loopNum % this.textToDisplay.length;
     var fullText = this.textToDisplay[i];
-
 
     if(this.isDeleting){
         this.textDisplay = fullText.substring(0, this.textDisplay.length - 1);
@@ -104,7 +94,7 @@ typer.prototype.tick = function(){
         reg4 = /↵/gi
         reg5 = /⬑/gi
         reg6 = /⬏/gi
-        textDisplayReplaced1 = this.textDisplay.replace(reg1,  "<").replace(reg2,  "<span>").replace(reg3,  "</span>").replace(reg4, "<br>").replace(reg5, '<a href="https://www.youtube.com/watch?v=T1XgFsitnQw" target="_blank">').replace(reg6, "</a>");
+        textDisplayReplaced1 = this.textDisplay.replace(reg1,  "<").replace(reg2,  '<span class="interactable">').replace(reg3,  "</span>").replace(reg4, "<br>").replace(reg5, '<a href="https://www.youtube.com/watch?v=T1XgFsitnQw" target="_blank">').replace(reg6, "</a>");
 
     this.element.innerHTML = textDisplayReplaced1;
 
@@ -117,11 +107,11 @@ typer.prototype.tick = function(){
 };
 
 window.onload = function(){
-    var element1 = document.getElementById('typewriter');
+    var element1 = document.getElementById('heading-mobile-type');
 
     new typer(element1, textArray1, 2000);
 
-    var element2 = document.getElementById('typewriter2');
+    var element2 = document.getElementById('heading-desktop-type');
 
     new typer(element2, textArray2, 2000);
     
