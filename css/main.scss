@@ -5,6 +5,8 @@
     --text-colour-dark: #161616;
     --text-colour-mid: #b4b4b4;
     --text-colour-light: white;
+
+    color-scheme: light dark;
 }
 
 *{
@@ -148,7 +150,7 @@ li{
     // transition: all 0.3s ease;
 
     &:hover{
-        background-color: var(--button-colour);
+        background-color: #007acc;
         color: var(--button-colour-text);
         transform: scale(0.98);
         border-radius: 0.5em;
@@ -189,6 +191,7 @@ li{
     z-index: 10;
     transition: top 0.5s ease-out;
     pointer-events: none;
+    overflow: hidden;
     
     &.menu-open{
         .nav-mobile-dropdown{
@@ -350,21 +353,26 @@ li{
     clip-path: polygon(0 0, 100% 0%, 100% 110%, 0% 110%);
 
     .home-animation{
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         width: 100%;
         height: 100%;
         position: fixed;
     }
 
     .container{
+        align-self:flex-start;
         position: fixed;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        height: 85%;
+        height: 90vh;
     }
 
     .home-splash{
-        margin-top: 2rem;
+        margin-top: 10vh;
         color: var(--text-colour-mid);
         font-family: 'Roboto Mono';
         text-align: left;
@@ -1304,6 +1312,10 @@ li{
         display: none !important;
     }
 
+    .home{
+        height: 150vh !important;
+    }
+
     .home-animation{
         opacity: 0.1;
     }
@@ -1649,6 +1661,12 @@ li{
 
     .heading-desktop-text{
         font-size: 3.5em;
+    }
+}
+
+@media screen and (prefers-color-scheme: light) and (max-width: 700px) {
+    .home-animation{
+        opacity: 0.6;
     }
 }
 

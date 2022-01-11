@@ -28,7 +28,7 @@ document.addEventListener('scroll', e => {
     if(window.pageYOffset > home.clientHeight){
         nav.style.top = "0";
     }
-    else if(window.pageYOffset < home.clientHeight){
+    else if(window.pageYOffset < home.clientHeight && !nav.classList.contains('menu-open')){
         nav.style.top = "-80px";
         nav.classList.remove('menu-open');
         navEnterButton.classList.remove('menu-open');
@@ -39,9 +39,17 @@ document.addEventListener('scroll', e => {
 document.addEventListener('mousemove', e => {
     if(e.clientY < 80){
         nav.style.top = "0";
+        // console.log(nav.classList.contains('menu-open'));
     }
-    else if(window.pageYOffset < home.clientHeight && e.clientY > 80 && !nav.classList.contains(menu-open)){
-        nav.style.top = "-80px";
+    else if(window.pageYOffset < home.clientHeight){
+        if((e.clientY > 80 && !nav.classList.contains('menu-open')) || (e.clientY > 390 && nav.classList.contains('menu-open'))){
+            nav.style.top = "-80px";
+            nav.classList.remove('menu-open');
+            navEnterButton.classList.remove('menu-open');
+            navExitButton.classList.remove('menu-open');
+        }
+    }
+    else if(e.clientY > 390 && nav.classList.contains('menu-open')){
         nav.classList.remove('menu-open');
         navEnterButton.classList.remove('menu-open');
         navExitButton.classList.remove('menu-open');
