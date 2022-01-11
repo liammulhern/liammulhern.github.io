@@ -152,7 +152,6 @@ li {
   font-weight: 400;
   border-radius: 0.2em;
   border: 1px var(--button-colour) solid;
-  background-color: #f2f2f6e0;
   -webkit-transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out, -webkit-transform 0.5s ease-out !important;
   transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out, -webkit-transform 0.5s ease-out !important;
   transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out, transform 0.5s ease-out !important;
@@ -171,18 +170,6 @@ li {
 .button:active {
   -webkit-transform: scale(0.92);
           transform: scale(0.92);
-}
-
-.contact-resume-button {
-  border-color: var(--primary-colour-dark);
-  color: var(--primary-colour-dark);
-  border-width: 2px;
-  font-weight: 400;
-  background-color: transparent;
-}
-
-.contact-resume-button:hover {
-  background-color: var(--primary-colour-dark);
 }
 
 .cursor {
@@ -2039,6 +2026,7 @@ li {
   }
   .primary-cta {
     color: #007acc;
+    background-color: #f2f2f6e0;
   }
   .home-scroll::after {
     background-color: #007acc !important;
@@ -2070,6 +2058,17 @@ li {
   .work-down {
     stroke: var(--text-colour-dark);
   }
+  .contact-resume-button {
+    border-color: var(--primary-colour-dark);
+    color: var(--primary-colour-dark);
+    border-width: 2px;
+    font-weight: 400;
+    background-color: unset;
+  }
+  .contact-resume-button:hover {
+    background-color: var(--primary-colour-dark);
+    color: var(--text-colour-light);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -2099,6 +2098,14 @@ li {
   .heading-desktop-text a, .heading-mobile-text a {
     color: var(--text-colour-light);
   }
+  .primary-cta {
+    color: #fff;
+    background-color: unset !important;
+  }
+  .primary-cta:hover {
+    color: var(--button-colour-text);
+    background-color: var(--button-colour) !important;
+  }
   .about-wave {
     fill: var(--text-colour-light);
   }
@@ -2107,6 +2114,17 @@ li {
   }
   .work-down {
     stroke: var(--text-colour-light);
+  }
+  .contact-resume-button {
+    border-color: var(--button-colour);
+    color: var(--button-colour);
+    border-width: 2px;
+    font-weight: 400;
+    background-color: unset;
+  }
+  .contact-resume-button:hover {
+    background-color: var(--button-colour);
+    color: var(--button-colour-text);
   }
 }
 /*# sourceMappingURL=main.css.map */
