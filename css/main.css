@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto+Mono:wght@300;400;500&display=swap");
 :root {
   --text-colour-dark: #161616;
   --text-colour-mid: #b4b4b4;
@@ -149,8 +149,10 @@ li {
   padding: .4em 1em;
   font-size: 1.4em;
   font-family: 'Roboto Mono';
+  font-weight: 400;
   border-radius: 0.2em;
-  border: 2px var(--button-colour) solid;
+  border: 1px var(--button-colour) solid;
+  background-color: #f2f2f6e0;
   -webkit-transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out, -webkit-transform 0.5s ease-out !important;
   transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out, -webkit-transform 0.5s ease-out !important;
   transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out, transform 0.5s ease-out !important;
@@ -163,11 +165,24 @@ li {
   -webkit-transform: scale(0.98);
           transform: scale(0.98);
   border-radius: 0.5em;
+  font-weight: 400;
 }
 
 .button:active {
   -webkit-transform: scale(0.92);
           transform: scale(0.92);
+}
+
+.contact-resume-button {
+  border-color: var(--primary-colour-dark);
+  color: var(--primary-colour-dark);
+  border-width: 2px;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.contact-resume-button:hover {
+  background-color: var(--primary-colour-dark);
 }
 
 .cursor {
@@ -245,6 +260,8 @@ li {
           align-items: center;
   padding: 0.5rem;
   pointer-events: all !important;
+  border-width: 2px;
+  border-bottom: var(--primary-colour-dark);
 }
 
 .nav-bar .nav-desktop .nav-name-logo {
@@ -319,6 +336,12 @@ li {
   border-left: 1px dashed var(--text-colour-light);
   padding-left: 0.5em;
   margin-left: 0.5em;
+}
+
+.nav-bar .nav-mobile .nav-mobile-content li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .nav-bar .nav-mobile .nav-mobile-dropdown {
@@ -438,7 +461,15 @@ li {
 
 .home .home-splash .heading-mobile {
   width: 80vw;
-  height: 40vh;
+  min-height: 40vh;
+  background: #1e1e1e80;
+  border: 1px var(--text-colour-mid) solid;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.home .home-splash .heading-mobile .heading-mobile-name {
+  margin-bottom: 1rem;
 }
 
 .home .home-splash .heading-mobile .heading-mobile-text {
@@ -447,6 +478,7 @@ li {
   overflow-wrap: break-word;
   white-space: pre-wrap;
   color: var(--text-colour-mid);
+  margin: 0;
 }
 
 .home .home-splash .heading-mobile .heading-mobile-text span, .home .home-splash .heading-mobile .heading-mobile-text a {
@@ -457,6 +489,58 @@ li {
   content: "|";
   -webkit-animation: blink 0.5s linear infinite alternate;
           animation: blink 0.5s linear infinite alternate;
+}
+
+.home .home-splash .heading-mobile .heading-mobile-window {
+  padding: 0.5rem 2rem;
+}
+
+.home .home-splash .heading-mobile .heading-mobile-window p {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.home .home-splash .heading-mobile .heading-mobile-taskbar {
+  height: 50px;
+  border-bottom: 1px var(--text-colour-mid) solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.home .home-splash .heading-mobile .heading-mobile-taskbar p {
+  color: var(--text-colour-light);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.home .home-splash .heading-mobile .heading-mobile-taskbar a {
+  justify-self: right;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.home .home-splash .heading-mobile .heading-mobile-taskbar a img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  height: 20px;
 }
 
 .home .home-splash .heading-desktop-name, .home .home-splash .heading-mobile-name {
@@ -510,7 +594,7 @@ li {
   margin-left: 0.5em;
 }
 
-.home .home-splash .heading-desktop .heading-dekstop-taskbar {
+.home .home-splash .heading-desktop .heading-desktop-taskbar {
   height: 80px;
   border-bottom: 1px var(--text-colour-mid) solid;
   display: -webkit-box;
@@ -526,14 +610,14 @@ li {
   padding: 0 1rem;
 }
 
-.home .home-splash .heading-desktop .heading-dekstop-taskbar p {
+.home .home-splash .heading-desktop .heading-desktop-taskbar p {
   color: var(--text-colour-light);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-.home .home-splash .heading-desktop .heading-dekstop-taskbar a {
+.home .home-splash .heading-desktop .heading-desktop-taskbar a {
   -ms-grid-column-align: right;
       justify-self: right;
   -ms-flex-item-align: center;
@@ -541,7 +625,7 @@ li {
       align-self: center;
 }
 
-.home .home-splash .heading-desktop .heading-dekstop-taskbar a img {
+.home .home-splash .heading-desktop .heading-desktop-taskbar a img {
   height: 30px;
 }
 
@@ -1327,7 +1411,7 @@ li {
 }
 
 .hobbies .hobbies-sub {
-  color: var(--text-colour-mid);
+  color: var(--text-colour-light);
   font-family: "Roboto Mono";
   -webkit-transform: translateX(-10px);
           transform: translateX(-10px);
@@ -1497,7 +1581,6 @@ li {
 }
 
 .contact .contact-email-container {
-  overflow: hidden;
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   display: inline-block;
@@ -1607,6 +1690,9 @@ li {
 }
 
 @media screen and (max-width: 700px) {
+  * {
+    cursor: default !important;
+  }
   .nav-desktop {
     display: none !important;
   }
@@ -1675,6 +1761,9 @@ li {
   }
   .nav-desktop .nav-desktop-content li {
     display: inline-block;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
   }
   .nav-desktop .nav-desktop-content a {
     display: block;
@@ -1933,8 +2022,8 @@ li {
     --primary-colour-about: #949CDF;
     --primary-colour-hobbies: #f4a9a8;
     --primary-colour-dark: #161616;
-    --text-colour-span: var(--text-colour-light);
-    --button-colour: var(--text-colour-dark);
+    --text-colour-span: #007acc;
+    --button-colour: var(--text-colour-mid);
     --button-colour-text: var(--text-colour-light);
     --portfolio-colour-a: #fbc6a4;
     --portfolio-colour-b: #f4a9a8;
@@ -1945,14 +2034,29 @@ li {
     --portfolio-colour-g: #433887;
     --portfolio-colour-h: #94B3FD;
   }
+  .nav-desktop span {
+    color: #fff !important;
+  }
+  .primary-cta {
+    color: #007acc;
+  }
+  .home-scroll::after {
+    background-color: #007acc !important;
+  }
   .about-minor {
     color: var(--text-colour-light);
   }
   .heading-desktop-text a, .heading-mobile-text a {
     color: var(--text-colour-dark);
   }
-  .heading-desktop {
-    background: #161616 !important;
+  .heading-desktop-taskbar, .heading-mobile-taskbar {
+    background: #007acc;
+  }
+  .heading-desktop, .heading-mobile {
+    background: #f2f2f6e0 !important;
+  }
+  .heading-desktop .str, .heading-mobile .str {
+    color: #2b91af !important;
   }
   .text-bg {
     color: var(--text-colour-dark);

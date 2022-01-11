@@ -40,7 +40,7 @@ document.addEventListener('mousemove', e => {
     if(e.clientY < 80){
         nav.style.top = "0";
     }
-    else if(window.pageYOffset < home.clientHeight && e.clientY > 80){
+    else if(window.pageYOffset < home.clientHeight && e.clientY > 80 && !nav.classList.contains(menu-open)){
         nav.style.top = "-80px";
         nav.classList.remove('menu-open');
         navEnterButton.classList.remove('menu-open');

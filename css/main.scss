@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto+Mono:wght@300;400;500&display=swap');
 
 :root{
     --text-colour-dark: #161616;
@@ -139,9 +139,12 @@ li{
     padding: .4em 1em;
     font-size: 1.4em;
     font-family: 'Roboto Mono';
+    font-weight: 400;
 
     border-radius: 0.2em;
-    border: 2px var(--button-colour) solid;
+    border: 1px var(--button-colour) solid;
+
+    background-color: #f2f2f6e0;
 
     transition: background-color 0.2s ease-out 0.1s, color 0.15s ease 0s, border-radius 0.3s ease-out, transform 0.5s ease-out !important;
     // transition: all 0.3s ease;
@@ -151,9 +154,22 @@ li{
         color: var(--button-colour-text);
         transform: scale(0.98);
         border-radius: 0.5em;
+        font-weight: 400;
     }
     &:active{
         transform: scale(0.92);
+    }
+}
+
+.contact-resume-button{
+    border-color: var(--primary-colour-dark);
+    color: var(--primary-colour-dark);
+    border-width: 2px;
+    font-weight: 400;
+    background-color: transparent;
+
+    &:hover{
+        background-color: var(--primary-colour-dark);
     }
 }
 
@@ -210,6 +226,8 @@ li{
         align-items: center;
         padding: 0.5rem;
         pointer-events: all !important;
+        border-width: 2px;
+        border-bottom: var(--primary-colour-dark);
 
         .nav-name-logo{
             transition: all 0.4s ease-out;
@@ -269,6 +287,10 @@ li{
             border-left: 1px dashed var(--text-colour-light);
             padding-left: 0.5em;
             margin-left: 0.5em;
+
+            li{
+                width: fit-content;
+            }
         }   
 
         .nav-mobile-dropdown{
@@ -363,7 +385,15 @@ li{
 
         .heading-mobile{
             width: 80vw;
-            height: 40vh;
+            min-height: 40vh;
+            background: #1e1e1e80;
+            border: 1px var(--text-colour-mid) solid;
+            border-radius: 0.5rem;
+            overflow: hidden;
+
+            .heading-mobile-name{
+                margin-bottom: 1rem;
+            }
 
             .heading-mobile-text{
                 font-family: 'Roboto Mono';
@@ -371,6 +401,7 @@ li{
                 overflow-wrap: break-word;
                 white-space: pre-wrap;
                 color: var(--text-colour-mid);
+                margin: 0;
 
                 span, a{
                     font-weight: 500;
@@ -380,7 +411,40 @@ li{
                     content: "|";
                     animation: blink 0.5s linear infinite alternate;
                 }
-            }   
+            }
+            
+            .heading-mobile-window{
+                padding: 0.5rem 2rem;
+
+                p{
+                    width: fit-content;
+                }
+            }
+
+            .heading-mobile-taskbar{
+                height: 50px;
+                border-bottom: 1px var(--text-colour-mid) solid;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 0 1rem;
+
+                p{
+                    color: var(--text-colour-light);
+                    align-self: center;
+                }
+
+                a{
+                    justify-self: right;
+                    align-self: center;
+                    display: flex;
+                    flex-direction: column;
+                    img{
+                        justify-self: center;
+                        height: 20px;
+                    }
+                }
+            }
         }
 
         .heading-desktop-name, .heading-mobile-name{
@@ -425,7 +489,7 @@ li{
                 margin-left: 0.5em;
             }
 
-            .heading-dekstop-taskbar{
+            .heading-desktop-taskbar{
                 height: 80px;
                 border-bottom: 1px var(--text-colour-mid) solid;
                 display: flex;
@@ -1036,7 +1100,7 @@ li{
     }
 
     .hobbies-sub{
-        color: var(--text-colour-mid);
+        color: var(--text-colour-light);
         font-family: "Roboto Mono";
         transform: translateX(-10px);
         font-size: 1em;
@@ -1051,9 +1115,6 @@ li{
     .hobbies-mobile-images{
         overflow: hidden;
         height: 40vh;
-        // height: fit-content;
-        // scroll-snap-type: x;
-        // scroll-behavior: smooth;
 
         .hobbies-mobile-photography{
             display: flex;
@@ -1067,26 +1128,16 @@ li{
             display: flex;
             flex-direction: row;
             overflow: visible;
-            // width: fit-content;
             height: 100%;
         }
  
         li{
             height: 100%;
             scroll-snap-align: center;
-            // margin: 0.5rem;
-            // max-width: 30vw;
-            // display: inline-block;
-            // width: fit-content;
-            // width: 100%;
             transition: all .3s ease;
             list-style: none;
 
             img{
-                // max-height: 100%;
-                // height: 100%;
-                // width: auto;
-                // display: inline-block;
                 height: 95%;
                 border: 3px solid var(--text-colour-light);
                 border-radius: 1em;
@@ -1168,7 +1219,6 @@ li{
     }
 
     .contact-email-container{
-        overflow: hidden;
         transition: all .3s ease;
         display: inline-block;
 
@@ -1260,6 +1310,10 @@ li{
 }
 
 @media screen and (max-width: 700px) {
+    *{
+        cursor: default !important;
+    }
+
     .nav-desktop{
         display: none !important;
     }
@@ -1343,6 +1397,7 @@ li{
 
             li{
                 display: inline-block;
+                flex: 1 1 100%;
             }
 
             a{
@@ -1620,9 +1675,9 @@ li{
     
         --primary-colour-dark: #161616;
     
-        --text-colour-span: var(--text-colour-light);
+        --text-colour-span: #007acc;
     
-        --button-colour: var(--text-colour-dark);
+        --button-colour: var(--text-colour-mid);
         --button-colour-text: var(--text-colour-light);
         
         --portfolio-colour-a: #fbc6a4;
@@ -1635,6 +1690,20 @@ li{
         --portfolio-colour-h: #94B3FD;
     }
 
+    .nav-desktop{
+        span{
+            color: #fff !important;
+        }
+    }
+
+    .primary-cta{
+        color: #007acc;
+    }
+
+    .home-scroll::after{
+        background-color: #007acc !important;
+    }
+
     .about-minor {
         color: var(--text-colour-light);
     }
@@ -1645,8 +1714,16 @@ li{
         }
     }
 
-    .heading-desktop{
-        background: #161616 !important;
+    .heading-desktop-taskbar, .heading-mobile-taskbar{
+        background: #007acc;
+    }
+
+    .heading-desktop, .heading-mobile{
+        background: #f2f2f6e0 !important;
+
+        .str{
+            color: #2b91af !important;
+        }
     }
     
     .text-bg{
